@@ -83,9 +83,26 @@ const axisLabels = {
     </section>
 
     <section class="panel">
+      <div v-if="result.characterMatches[0]" class="featured-match">
+        <div>
+          <p class="eyebrow">首位匹配</p>
+          <h2 class="section-title">{{ result.characterMatches[0].name }}</h2>
+          <p class="lead">{{ result.characterMatches[0].series }}</p>
+        </div>
+        <div class="pill-row">
+          <span v-for="tag in result.characterMatches[0].tags" :key="tag" class="pill">{{ tag }}</span>
+        </div>
+        <p class="body-copy">{{ result.characterMatches[0].note }}</p>
+      </div>
+
       <h2 class="section-title">你最像的角色</h2>
       <div class="timeline-list">
-        <article v-for="character in result.characterMatches" :key="character.id" class="timeline-item">
+        <article
+          v-for="(character, index) in result.characterMatches"
+          :key="character.id"
+          class="timeline-item"
+          :class="{ 'timeline-item-featured': index === 0 }"
+        >
           <div class="character-topline">
             <div>
               <h3>{{ character.name }}</h3>
@@ -127,6 +144,15 @@ const axisLabels = {
   gap: 12px;
 }
 
+.featured-match {
+  margin-bottom: 18px;
+  padding: 20px;
+  border-radius: 24px;
+  background:
+    linear-gradient(140deg, rgba(255, 111, 145, 0.12), rgba(110, 197, 255, 0.08) 72%),
+    rgba(255, 255, 255, 0.04);
+}
+
 .stat-head,
 .character-topline {
   display: flex;
@@ -137,6 +163,10 @@ const axisLabels = {
 .character-topline {
   align-items: start;
   margin-bottom: 10px;
+}
+
+.timeline-item-featured {
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .character-topline h3,
