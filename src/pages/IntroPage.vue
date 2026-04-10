@@ -4,7 +4,7 @@
       <p class="eyebrow">测试说明</p>
       <h1 class="display-title">这是角色原型测试，不是心理诊断。</h1>
       <p class="lead">
-        你会回答 48 道五级量表题。系统会先计算 MBTI 四个维度，再映射唯一命中的角色代码、对应的二次元原型，以及各维度倾向比例。
+        你会回答 37 道五级量表题。系统会先计算 MBTI 四个维度，再映射唯一命中的角色代码、对应的二次元原型，以及各维度倾向比例。
       </p>
       <div class="cta-row" style="justify-content: center;">
         <RouterLink class="button button-primary" to="/quiz">直接开始</RouterLink>

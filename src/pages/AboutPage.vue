@@ -35,7 +35,7 @@
         <div class="timeline-list">
           <div class="timeline-item">
             <span class="label">内容层</span>
-            <p class="value">48 道题、8 个原型、22 位已录入角色。</p>
+            <p class="value">37 道题、8 个原型、22 位已录入角色。</p>
           </div>
           <div class="timeline-item">
             <span class="label">规则层</span>

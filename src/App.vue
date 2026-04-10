@@ -1,7 +1,7 @@
 <template>
   <div class="site-shell">
     <!-- 16Personalities-style Header -->
-    <header v-if="$route.path !== '/quiz'" class="site-header">
+    <header class="site-header">
       <RouterLink class="brand-lockup" to="/">
         <div class="brand-logo" aria-hidden="true">
           <span class="dot dot-1"></span>
@@ -15,6 +15,7 @@
       <nav class="site-nav">
         <RouterLink to="/quiz">开始测试</RouterLink>
         <RouterLink to="/intro">人格类型</RouterLink>
+        <RouterLink to="/characters">所有角色</RouterLink>
         <RouterLink to="/about">项目说明</RouterLink>
         <RouterLink to="/result" v-if="$route.path !== '/result'">最近结果</RouterLink>
         <RouterLink to="/quiz" class="button button-primary nav-cta">立即测评</RouterLink>
@@ -34,6 +35,7 @@
           <RouterLink to="/quiz" class="footer-link">开始 ACGTI 测试</RouterLink>
           <RouterLink to="/result" class="footer-link">查看最近结果</RouterLink>
           <RouterLink to="/intro" class="footer-link">16 型人格说明</RouterLink>
+          <RouterLink to="/characters" class="footer-link">所有结果角色</RouterLink>
         </div>
         <div class="footer-section">
           <h3 class="footer-title">项目内容</h3>
@@ -50,7 +52,7 @@
         <div class="footer-section">
           <h3 class="footer-title">当前状态</h3>
           <p class="footer-note">纯前端静态站点</p>
-          <p class="footer-note">48 道题 / 4 维 MBTI</p>
+          <p class="footer-note">37 道题 / 4 维 MBTI</p>
           <p class="footer-note">8 个原型 / 22 位角色</p>
         </div>
       </div>
@@ -60,6 +62,7 @@
           <RouterLink to="/" title="首页">首页</RouterLink>
           <RouterLink to="/quiz" title="测试">测试</RouterLink>
           <RouterLink to="/intro" title="类型">类型</RouterLink>
+          <RouterLink to="/characters" title="角色">角色</RouterLink>
           <RouterLink to="/about" title="说明">说明</RouterLink>
         </div>
       </div>

@@ -7,6 +7,7 @@ const router = createRouter({
     { path: '/intro', name: 'intro', component: () => import('../pages/IntroPage.vue') },
     { path: '/quiz', name: 'quiz', component: () => import('../pages/QuizPage.vue') },
     { path: '/result', name: 'result', component: () => import('../pages/ResultPage.vue') },
+    { path: '/characters', name: 'characters', component: () => import('../pages/CharactersPage.vue') },
     { path: '/about', name: 'about', component: () => import('../pages/AboutPage.vue') },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],

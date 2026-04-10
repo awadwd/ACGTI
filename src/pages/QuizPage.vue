@@ -1,28 +1,5 @@
 <template>
   <div class="quiz-page-16p">
-    <header class="quiz-topbar">
-      <div class="quiz-topbar-inner">
-        <RouterLink to="/" class="brand-wrap" aria-label="返回首页">
-          <span class="logo-dot-wrap" aria-hidden="true">
-            <span class="logo-dot d1"></span>
-            <span class="logo-dot d2"></span>
-            <span class="logo-dot d3"></span>
-            <span class="logo-dot d4"></span>
-            <span class="logo-core"></span>
-          </span>
-          <span class="brand-text">ACGTI</span>
-        </RouterLink>
-
-        <nav class="top-links" aria-label="主导航">
-          <RouterLink to="/quiz">性格测试</RouterLink>
-          <RouterLink to="/intro">性格类型</RouterLink>
-          <RouterLink to="/about">项目说明</RouterLink>
-        </nav>
-
-        <RouterLink class="login-btn" to="/">返回首页</RouterLink>
-      </div>
-    </header>
-
     <main class="quiz-main">
       <section class="hero">
         <h1>免费性格测试</h1>
@@ -111,7 +88,7 @@
 
     <footer class="quiz-footer">
       <div class="quiz-footer-inner">
-        <div class="share-count">48 题 MBTI 测试</div>
+        <div class="share-count">37 题 MBTI 测试</div>
         <div class="footer-links">
           <RouterLink to="/">首页</RouterLink>
           <RouterLink to="/intro">人格类型</RouterLink>
@@ -168,107 +145,6 @@ function submitQuiz() {
   min-height: 100vh;
   background: #ffffff;
   color: #2d3436;
-}
-
-.quiz-topbar {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  border-bottom: 1px solid #edf1f5;
-  background: #ffffff;
-}
-
-.quiz-topbar-inner {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.brand-wrap {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-dot-wrap {
-  position: relative;
-  width: 26px;
-  height: 26px;
-}
-
-.logo-dot,
-.logo-core {
-  position: absolute;
-  border-radius: 999px;
-}
-
-.logo-dot {
-  width: 8px;
-  height: 8px;
-}
-
-.logo-core {
-  width: 10px;
-  height: 10px;
-  left: 8px;
-  top: 8px;
-  background: #d9dde3;
-}
-
-.d1 {
-  left: 0;
-  top: 9px;
-  background: #37a676;
-}
-
-.d2 {
-  right: 0;
-  top: 9px;
-  background: #8a64a2;
-}
-
-.d3 {
-  left: 9px;
-  top: 0;
-  background: #3c98b7;
-}
-
-.d4 {
-  left: 9px;
-  bottom: 0;
-  background: #f0ab2e;
-}
-
-.brand-text {
-  font-weight: 700;
-  color: #3a4045;
-  letter-spacing: 0.01em;
-}
-
-.top-links {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.top-links a {
-  color: #5f6a75;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.login-btn {
-  border: 1px solid #ccd4dc;
-  background: #ffffff;
-  color: #4f5b66;
-  border-radius: 999px;
-  padding: 8px 16px;
-  font-size: 13px;
-  font-weight: 600;
 }
 
 .quiz-main {
@@ -581,10 +457,6 @@ function submitQuiz() {
   .quiz-main {
     padding-left: 14px;
     padding-right: 14px;
-  }
-
-  .top-links {
-    display: none;
   }
 
   .question-block {

@@ -114,7 +114,7 @@
 
 <script setup lang="ts">
 const stats = [
-  { value: "48", label: "测试题数", color: "#4899a3" },
+  { value: "37", label: "测试题数", color: "#4899a3" },
   { value: "16", label: "MBTI 类型", color: "#e5b540" },
   { value: "8", label: "原型映射", color: "#5ca173" },
   { value: "22", label: "当前角色库", color: "#9474a4" },
@@ -368,7 +368,8 @@ const testimonials = [
 .stat-label {
   margin: 0.7rem 0 0;
   font-size: 0.95rem;
-  color: #64717b;
+  font-weight: 500;
+  color: #666;
 }
 
 .feature {
@@ -421,8 +422,8 @@ const testimonials = [
 
 .feature-copy {
   margin: 1.3rem 0 1.8rem;
-  color: #54616c;
-  font-size: 1.08rem;
+  color: #666;
+  font-size: 1.125rem;
   line-height: 1.75;
 }
 
@@ -626,7 +627,7 @@ const testimonials = [
 
 .quote {
   margin: 1rem 0 0;
-  color: #4f5e6b;
+  color: #555;
   line-height: 1.7;
   font-size: 0.95rem;
 }
