@@ -1,22 +1,23 @@
 <template>
-  <section class="panel question-card">
-    <div class="question-head">
-      <p class="eyebrow">剧情问题</p>
-      <h1 class="section-title question-title">{{ question.prompt }}</h1>
-      <p class="lead">{{ question.scene }}</p>
+  <section class="question-card">
+    <div class="question-content">
+      <h1 class="question-title">{{ question.prompt }}</h1>
     </div>
 
-    <div class="option-list">
+    <div class="options-grid">
       <button
         v-for="(option, index) in question.options"
         :key="option.id"
         type="button"
         class="option-button"
-        :class="{ 'option-button-active': selectedIndex === index }"
+        :class="[
+          'option-' + index,
+          { 'selected': selectedIndex === index }
+        ]"
         @click="$emit('select', index)"
       >
+        <span class="option-circle"></span>
         <span class="option-label">{{ option.label }}</span>
-        <span class="option-tone">{{ option.tone }}</span>
       </button>
     </div>
   </section>
@@ -37,65 +38,154 @@ defineEmits<{
 
 <style scoped>
 .question-card {
-  display: grid;
-  gap: 22px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+  padding: 48px 40px;
+  margin-bottom: 32px;
 }
 
-.question-head {
-  max-width: 56rem;
+.question-content {
+  text-align: center;
+  margin-bottom: 48px;
 }
 
 .question-title {
-  margin-bottom: 8px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  line-height: 1.4;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
-.option-list {
+.options-grid {
   display: grid;
-  gap: 14px;
+  gap: 20px;
 }
 
 .option-button {
-  width: 100%;
-  display: grid;
-  gap: 8px;
-  padding: 20px 22px;
-  text-align: left;
-  border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background:
-    linear-gradient(140deg, rgba(255, 255, 255, 0.06), transparent 58%),
-    rgba(255, 255, 255, 0.02);
-  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 28px;
+  border: 3px solid transparent;
+  border-radius: 16px;
+  background: #f8f9fa;
   cursor: pointer;
-  transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    background-color 180ms ease;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
 }
 
-.option-button:hover,
-.option-button-active {
+.option-button:hover {
+  background: #e9ecef;
   transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.18);
-  background:
-    linear-gradient(140deg, rgba(255, 111, 145, 0.12), rgba(110, 197, 255, 0.06) 70%),
-    rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.option-button.selected {
+  border-color: currentColor;
+  background: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.option-circle {
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 3px solid currentColor;
+  transition: all 0.2s ease;
+}
+
+/* Option 0: Largest green circle (Strongly Agree) */
+.option-0 {
+  color: #33a474;
+}
+.option-0 .option-circle {
+  width: 52px;
+  height: 52px;
+}
+.option-0:hover .option-circle,
+.option-0.selected .option-circle {
+  background: #33a474;
+}
+
+/* Option 1: Medium green circle (Agree) */
+.option-1 {
+  color: #55c391;
+}
+.option-1 .option-circle {
+  width: 40px;
+  height: 40px;
+  margin: 0 6px;
+}
+.option-1:hover .option-circle,
+.option-1.selected .option-circle {
+  background: #55c391;
+}
+
+/* Option 2: Medium purple circle (Disagree) */
+.option-2 {
+  color: #a481b8;
+}
+.option-2 .option-circle {
+  width: 40px;
+  height: 40px;
+  margin: 0 6px;
+}
+.option-2:hover .option-circle,
+.option-2.selected .option-circle {
+  background: #a481b8;
+}
+
+/* Option 3: Largest purple circle (Strongly Disagree) */
+.option-3 {
+  color: #88619a;
+}
+.option-3 .option-circle {
+  width: 52px;
+  height: 52px;
+}
+.option-3:hover .option-circle,
+.option-3.selected .option-circle {
+  background: #88619a;
 }
 
 .option-label {
-  color: var(--text);
-  font-size: 1.08rem;
-  line-height: 1.6;
+  font-size: 18px;
+  font-weight: 500;
+  color: #495057;
+  flex: 1;
 }
 
-.option-tone {
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .question-card {
-    gap: 18px;
+    padding: 32px 24px;
+  }
+
+  .question-title {
+    font-size: 22px;
+  }
+
+  .option-button {
+    padding: 16px 20px;
+    gap: 16px;
+  }
+
+  .option-0 .option-circle,
+  .option-3 .option-circle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .option-1 .option-circle,
+  .option-2 .option-circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .option-label {
+    font-size: 16px;
   }
 }
 </style>

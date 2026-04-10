@@ -1,0 +1,3737 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.gitignore
+.playwright-mcp/page-2026-04-10T07-11-27-743Z.yml
+16personalities-result.png
+AGENTS.md
+index.html
+package.json
+public/favicon.svg
+public/icons.svg
+README.md
+src/App.vue
+src/components/ProgressBar.vue
+src/components/QuestionCard.vue
+src/components/ResultSummary.vue
+src/components/SharePoster.vue
+src/composables/useQuiz.ts
+src/composables/useShare.ts
+src/data/archetypes.json
+src/data/characters.json
+src/data/questions.json
+src/main.ts
+src/pages/AboutPage.vue
+src/pages/HomePage.vue
+src/pages/IntroPage.vue
+src/pages/QuizPage.vue
+src/pages/ResultPage.vue
+src/router/index.ts
+src/style.css
+src/types/quiz.ts
+src/utils/quizEngine.ts
+src/utils/storage.ts
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".playwright-mcp/page-2026-04-10T07-11-27-743Z.yml">
+- generic [active] [ref=e1]:
+  - list [ref=e2]:
+    - listitem [ref=e3]:
+      - link "Skip to main content" [ref=e4] [cursor=pointer]:
+        - /url: "#main-content"
+    - listitem [ref=e5]:
+      - link "Skip to search" [ref=e6] [cursor=pointer]:
+        - /url: "#skip-search"
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - link "The 16Personalities logo, made up of 16 dots in four different colors -- purple, blue, yellow, and green -- all forming a circle that is arranged in four distinct clusters by color. The dots represent the 16 different personality types. Within the circle are four larger dots of the same colors, representing the broader personality Roles." [ref=e9] [cursor=pointer]:
+        - /url: /
+        - img "The 16Personalities logo, made up of 16 dots in four different colors -- purple, blue, yellow, and green -- all forming a circle that is arranged in four distinct clusters by color. The dots represent the 16 different personality types. Within the circle are four larger dots of the same colors, representing the broader personality Roles." [ref=e10]
+      - navigation [ref=e11]:
+        - list [ref=e12]:
+          - listitem [ref=e13]:
+            - link "Personality Test" [ref=e14] [cursor=pointer]:
+              - /url: /free-personality-test
+          - listitem [ref=e15]:
+            - link "Personality Types" [ref=e16] [cursor=pointer]:
+              - /url: /personality-types
+              - text: Personality Types
+              - img [ref=e18]
+          - listitem [ref=e20]:
+            - link "Career Suite" [ref=e21] [cursor=pointer]:
+              - /url: /premium/career-suite
+          - listitem [ref=e22]:
+            - link "Teams & Pros" [ref=e23] [cursor=pointer]:
+              - /url: /teams
+              - text: Teams & Pros
+              - img [ref=e25]
+          - listitem [ref=e27]:
+            - link "Resources" [ref=e28] [cursor=pointer]:
+              - /url: /articles?category=list
+              - text: Resources
+              - img [ref=e30]
+      - generic [ref=e32]:
+        - button "Search" [ref=e33]:
+          - img [ref=e35]
+        - link "Change language" [ref=e37] [cursor=pointer]:
+          - /url: https://www.16personalities.com/languages
+          - img [ref=e39]
+        - link "Log In" [ref=e41] [cursor=pointer]:
+          - /url: /profile
+          - generic [ref=e42]: Log In
+        - link "Take the Test" [ref=e43] [cursor=pointer]:
+          - /url: https://www.16personalities.com/free-personality-test
+    - navigation "Main menu"
+    - progressbar [ref=e44]:
+      - img [ref=e46]
+    - generic [ref=e51]: Englische Version
+    - contentinfo [ref=e52]:
+      - navigation "Footer" [ref=e53]:
+        - generic [ref=e54]:
+          - heading "Products" [level=3] [ref=e55]
+          - list [ref=e56]:
+            - listitem [ref=e57]:
+              - link "Premium Career Suite" [ref=e58] [cursor=pointer]:
+                - /url: https://www.16personalities.com/premium
+            - listitem [ref=e59]:
+              - link "Team Assessments" [ref=e60] [cursor=pointer]:
+                - /url: https://www.16personalities.com/teams
+            - listitem [ref=e61]:
+              - link "Reports for Professionals" [ref=e62] [cursor=pointer]:
+                - /url: https://www.16personalities.com/professionals
+            - listitem [ref=e63]:
+              - link "Testimonials" [ref=e64] [cursor=pointer]:
+                - /url: https://www.16personalities.com/orders/testimonials
+        - generic [ref=e65]:
+          - heading "Resources" [level=3] [ref=e66]
+          - list [ref=e67]:
+            - listitem [ref=e68]:
+              - link "Personality Test" [ref=e69] [cursor=pointer]:
+                - /url: https://www.16personalities.com/free-personality-test
+            - listitem [ref=e70]:
+              - link "Personality Types" [ref=e71] [cursor=pointer]:
+                - /url: https://www.16personalities.com/personality-types
+            - listitem [ref=e72]:
+              - link "Articles" [ref=e73] [cursor=pointer]:
+                - /url: https://www.16personalities.com/articles
+            - listitem [ref=e74]:
+              - link "Our Framework" [ref=e75] [cursor=pointer]:
+                - /url: https://www.16personalities.com/articles/our-theory
+            - listitem [ref=e76]:
+              - link "Country Profiles" [ref=e77] [cursor=pointer]:
+                - /url: https://www.16personalities.com/country-profiles
+        - generic [ref=e78]:
+          - heading "Help" [level=3] [ref=e79]
+          - list [ref=e80]:
+            - listitem [ref=e81]:
+              - link "Contact Us" [ref=e82] [cursor=pointer]:
+                - /url: https://www.16personalities.com/contact-us
+            - listitem [ref=e83]:
+              - link "FAQ" [ref=e84] [cursor=pointer]:
+                - /url: https://www.16personalities.com/contact-us#faq
+            - listitem [ref=e85]:
+              - button "Report an Issue" [ref=e86] [cursor=pointer]
+            - listitem [ref=e87]:
+              - link "Your Orders" [ref=e88] [cursor=pointer]:
+                - /url: https://www.16personalities.com/profile/order-history
+            - listitem [ref=e89]:
+              - link "Change Language" [ref=e90] [cursor=pointer]:
+                - /url: https://www.16personalities.com/languages
+        - generic [ref=e91]:
+          - heading "Our Other Creations" [level=3] [ref=e92]
+          - list [ref=e93]:
+            - listitem [ref=e94]:
+              - link "NPQE®" [ref=e95] [cursor=pointer]:
+                - /url: https://npqe.com
+            - listitem [ref=e96]:
+              - link "MindTrackers®" [ref=e97] [cursor=pointer]:
+                - /url: https://careerchange.mindtrackers.com
+            - listitem [ref=e98]:
+              - link "Leadership by 16Personalities" [ref=e99] [cursor=pointer]:
+                - /url: https://16personalities.substack.com
+            - listitem [ref=e100]:
+              - link "Grow with 16Personalities" [ref=e101] [cursor=pointer]:
+                - /url: https://infjby16personalities.substack.com
+      - generic [ref=e102]:
+        - generic [ref=e103]:
+          - generic [ref=e104]: ©2011-2026 NERIS Analytics Limited
+          - list [ref=e105]:
+            - listitem [ref=e106]:
+              - link "Terms & Conditions" [ref=e107] [cursor=pointer]:
+                - /url: https://www.16personalities.com/terms
+            - listitem [ref=e108]:
+              - link "Privacy Policy" [ref=e109] [cursor=pointer]:
+                - /url: https://www.16personalities.com/terms/privacy
+            - listitem [ref=e110]:
+              - link "Accessibility" [ref=e111] [cursor=pointer]:
+                - /url: https://www.16personalities.com/terms/accessibility
+        - generic [ref=e112]:
+          - link "Go to our Substack page" [ref=e113] [cursor=pointer]:
+            - /url: https://16personalities.substack.com/
+            - generic [ref=e114]:
+              - img "Substack"
+          - link "Go to our Facebook page" [ref=e115] [cursor=pointer]:
+            - /url: https://www.facebook.com/16Personalities/
+            - generic [ref=e116]:
+              - img "Facebook"
+          - link "Go to our Instagram page" [ref=e117] [cursor=pointer]:
+            - /url: https://www.instagram.com/16personalitiesofficial/
+            - generic [ref=e118]:
+              - img "Instagram"
+          - link "Go to our Twitter page" [ref=e119] [cursor=pointer]:
+            - /url: https://x.com/16Personalities
+            - generic [ref=e120]:
+              - img "Twitter"
+          - button "QR Code" [ref=e121] [cursor=pointer]:
+            - generic [ref=e122]:
+              - img "QR"
+</file>
+
+<file path=".gitignore">
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+.cache/
+.parcel-cache/
+.vite/
+.next/
+.nuxt/
+.svelte-kit/
+coverage/
+out/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Misc assets / archives
+*.zip
+*.tar
+*.gz
+</file>
+
+<file path="AGENTS.md">
+# ACGTI AGENT 工作规范
+
+本文件适用于仓库根目录及其所有子目录。除非用户明确给出更高优先级指令，否则在本仓库内工作的 Agent 必须遵守以下规则。
+
+## 1. 项目定义
+
+### 1.1. ACGTI 是什么
+
+`ACGTI` = `ACG Type Indicator`
+
+它是以现实人格鉴定工具 MBTI 为基础的“套壳”实现。本工具将经典的十六型人格分别映射到二次元语境下的核心角色形象。它测定的是受试者在现实世界中的人格倾向，并通过展示具有相应特质的二次元“人设原型”来呈现结果。
+
+### 1.2. 产品定位
+
+本项目默认按以下产品定位推进：
+
+- `ACGTI` 本质上是一个被精美包装的 `MBTI` 套壳，作为现实人格鉴定工具的二次元化表达。
+- `ACGTI` 的核心输出是“标准的四字母标签”，并附带与之对应的二次元角色原型解析、图片展示。
+- `ACGTI` 的交互体验和视觉风格应最大程度地复刻经典的十六型人格测试网站（如 16personalities），以扁平化、清晰直观的测试落地页风格呈现。
+- `ACGTI` 的价值主要来自于页面设计的还原度、逻辑严密的多维度题目，以及结果展示部分的二次元文案与立绘。
+
+## 2. 默认工作模式
+
+收到用户任务后，必须按以下顺序推进，不允许跳过“先理解再实现”的过程：
+
+1. 接收用户指令
+2. 阅读现有代码、文档、素材和配置
+3. 形成实现方案
+4. 执行实现
+5. 自我验证
+6. 交付成果
+
+执行要求：
+
+- 必须先理解仓库现状，再进行修改；即使仓库刚初始化，也要先确认目录结构与已有文件。
+- 必须尽量形成完整闭环，不要只停留在建议层面。
+- 应优先自主完成可落地工作，仅在缺少关键输入且无法合理推断时再询问用户。
+- 完成后必须进行最基本的自我验证；若因为环境或项目阶段限制无法验证，必须明确说明。
+
+## 3. 内容与产品表达要求
+
+- 用户可见文案需将四字母 MBTI 类型代码作为核心分类标签进行展示。
+- 采用严肃心理测试加二次元角色解析的模式，题目、选项以及结果展示参照 16personalities 的严肃风格。
+- 结果内容主要包含：“人格类型（四字母代码）”、对应二次元角色的解析、雷达图/柱状图展示各个维度的倾向比例。
+- 所有四字母编码必须对外作为首要识别符展示，并关联相应的二次元人设原型。
+
+## 4. 技术实现边界
+
+- 默认将本项目视为静态网站或前端优先项目处理。
+- 若无明确需求，不主动引入后端服务、用户系统、数据库、鉴权、消息队列或云函数。
+- 若需保存测试结果，优先考虑本地存储、纯前端状态或静态可部署方案。
+- 任何技术选型都应服务于页面体验、内容组织和可维护性，而不是炫技。
+- 新增依赖前必须考虑是否真的必要，避免在项目早期引入过重工具链。
+
+## 5. 视觉与交互要求
+
+- 页面设计风格要求极度趋近或复刻 16personalities 测试网站（包含扁平化 UI、经典 SaaS 风格）。
+- 卡片排版、圆角、绿色/青色按钮配色和结构化进度条设计都需要向 16personalities 标准靠拢。
+- 结果页应展示类似于 16personalities 的页面头部大色块、对应的二次元图片及四字母人格和称号组合。
+- 移动端体验不可忽略，所有的选择器应当还原 16personalities 那种逐渐变化大小的圆圈单选框。
+
+## 6. 代码与文件组织要求
+
+- 保持良好的模块拆分，避免把页面逻辑、题库数据、结果映射和样式全部堆在一个文件里。
+- 题目数据、类型定义、结果描述、视觉资源引用应尽量分层组织。
+- 在复杂映射逻辑、评分逻辑、结果归类逻辑处补充简洁注释，说明设计意图。
+- 优先写清晰、可维护的实现，不要为了“智能感”牺牲可读性。
+
+## 7. Git 与提交要求
+
+- 每完成一个功能，就应进行一次本地 Git 提交。
+- 提交前必须先检查工作区，只提交与当前任务直接相关的文件。
+- 提交信息必须使用中文，并采用“标题 + 空行 + 正文”的形式。
+- 提交前应用 `git status` 和 `git diff --staged` 复核内容。
+- 绝对禁止执行 `git push`。
+
+推荐格式：
+
+```text
+<type>(<scope>): <中文摘要>
+
+背景：
+- 说明为什么要做这次改动。
+
+实现：
+- 说明改了什么、采用了什么策略。
+
+验证：
+- 说明做了哪些检查、构建或人工验证。
+
+影响：
+- 说明影响范围、限制和后续事项。
+```
+
+## 8. 安全与边界要求
+
+- 绝不在仓库中硬编码 API Key、令牌、密码或其他敏感信息。
+- 不要把 `ACGTI` 描述成心理诊断、医学评估或可替代专业意见的工具。
+- 若用户提出会显著偏离本项目娱乐定位的设计，应先指出风险，再执行用户明确确认后的方案。
+
+## 9. 实施原则
+
+- 先读后改：先理解当前实现和项目方向，再动手。
+- 内容优先：优先保证世界观、题目设计、结果表达和页面体验的一致性。
+- 轻量优先：没有充分理由时，不把简单问题升级成复杂架构。
+- 结果导向：交付时明确说明做了什么、怎么验证、还有什么限制。
+- 尊重现状：不得随意覆盖或回退用户已有改动。
+</file>
+
+<file path="index.html">
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACGTI - ACG Type Indicator</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+</file>
+
+<file path="public/favicon.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" fill="none" viewBox="0 0 48 46"><path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z" style="fill:#863bff;fill:color(display-p3 .5252 .23 1);fill-opacity:1"/><mask id="a" width="48" height="46" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M25.842 44.938c-.664.844-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.183c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.498 0-3.579-1.842-3.579H1.133c-.92 0-1.456-1.04-.92-1.787L9.91.473c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.578 1.842 3.578h11.377c.943 0 1.473 1.088.89 1.832L25.843 44.94z" style="fill:#000;fill-opacity:1"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#ede6ff" rx="5.508" ry="14.704" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -4.47 31.516)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#ede6ff" rx="10.399" ry="29.851" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -39.328 7.883)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#7e14ff" rx="5.508" ry="30.487" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -25.913 -14.639)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -32.644 -3.334)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -34.34 30.47)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#ede6ff" rx="14.072" ry="22.078" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="rotate(93.35 24.506 48.493)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx=".387" cy="8.972" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(39.51 .387 8.972)"/></g><g filter="url(#k)"><ellipse cx="47.523" cy="-6.092" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 47.523 -6.092)"/></g><g filter="url(#l)"><ellipse cx="41.412" cy="6.333" fill="#47bfff" rx="5.971" ry="9.665" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 41.412 6.333)"/></g><g filter="url(#m)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#n)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#o)"><ellipse cx="35.651" cy="29.907" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 35.651 29.907)"/></g><g filter="url(#p)"><ellipse cx="38.418" cy="32.4" fill="#47bfff" rx="5.971" ry="15.297" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 38.418 32.4)"/></g></g><defs><filter id="b" width="60.045" height="41.654" x="-19.77" y="16.149" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-54.613" y="-7.533" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-49.64" y="2.03" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-45.045" y="20.029" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-43.513" y="21.178" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="15.756" y="-17.901" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-27.636" y="-22.853" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="20.116" y="-38.415" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="24.641" y="-11.323" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="8.244" y="-2.416" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="18.713" y="10.588" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter></defs></svg>
+</file>
+
+<file path="public/icons.svg">
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="bluesky-icon" viewBox="0 0 16 17">
+    <g clip-path="url(#bluesky-clip)"><path fill="#08060d" d="M7.75 7.735c-.693-1.348-2.58-3.86-4.334-5.097-1.68-1.187-2.32-.981-2.74-.79C.188 2.065.1 2.812.1 3.251s.241 3.602.398 4.13c.52 1.744 2.367 2.333 4.07 2.145-2.495.37-4.71 1.278-1.805 4.512 3.196 3.309 4.38-.71 4.987-2.746.608 2.036 1.307 5.91 4.93 2.746 2.72-2.746.747-4.143-1.747-4.512 1.702.189 3.55-.4 4.07-2.145.156-.528.397-3.691.397-4.13s-.088-1.186-.575-1.406c-.42-.19-1.06-.395-2.741.79-1.755 1.24-3.64 3.752-4.334 5.099"/></g>
+    <defs><clipPath id="bluesky-clip"><path fill="#fff" d="M.1.85h15.3v15.3H.1z"/></clipPath></defs>
+  </symbol>
+  <symbol id="discord-icon" viewBox="0 0 20 19">
+    <path fill="#08060d" d="M16.224 3.768a14.5 14.5 0 0 0-3.67-1.153c-.158.286-.343.67-.47.976a13.5 13.5 0 0 0-4.067 0c-.128-.306-.317-.69-.476-.976A14.4 14.4 0 0 0 3.868 3.77C1.546 7.28.916 10.703 1.231 14.077a14.7 14.7 0 0 0 4.5 2.306q.545-.748.965-1.587a9.5 9.5 0 0 1-1.518-.74q.191-.14.372-.293c2.927 1.369 6.107 1.369 8.999 0q.183.152.372.294-.723.437-1.52.74.418.838.963 1.588a14.6 14.6 0 0 0 4.504-2.308c.37-3.911-.63-7.302-2.644-10.309m-9.13 8.234c-.878 0-1.599-.82-1.599-1.82 0-.998.705-1.82 1.6-1.82.894 0 1.614.82 1.599 1.82.001 1-.705 1.82-1.6 1.82m5.91 0c-.878 0-1.599-.82-1.599-1.82 0-.998.705-1.82 1.6-1.82.893 0 1.614.82 1.599 1.82 0 1-.706 1.82-1.6 1.82"/>
+  </symbol>
+  <symbol id="documentation-icon" viewBox="0 0 21 20">
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="m15.5 13.333 1.533 1.322c.645.555.967.833.967 1.178s-.322.623-.967 1.179L15.5 18.333m-3.333-5-1.534 1.322c-.644.555-.966.833-.966 1.178s.322.623.966 1.179l1.534 1.321"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M17.167 10.836v-4.32c0-1.41 0-2.117-.224-2.68-.359-.906-1.118-1.621-2.08-1.96-.599-.21-1.349-.21-2.848-.21-2.623 0-3.935 0-4.983.369-1.684.591-3.013 1.842-3.641 3.428C3 6.449 3 7.684 3 10.154v2.122c0 2.558 0 3.838.706 4.726q.306.383.713.671c.76.536 1.79.64 3.581.66"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M3 10a2.78 2.78 0 0 1 2.778-2.778c.555 0 1.209.097 1.748-.047.48-.129.854-.503.982-.982.145-.54.048-1.194.048-1.749a2.78 2.78 0 0 1 2.777-2.777"/>
+  </symbol>
+  <symbol id="github-icon" viewBox="0 0 19 19">
+    <path fill="#08060d" fill-rule="evenodd" d="M9.356 1.85C5.05 1.85 1.57 5.356 1.57 9.694a7.84 7.84 0 0 0 5.324 7.44c.387.079.528-.168.528-.376 0-.182-.013-.805-.013-1.454-2.165.467-2.616-.935-2.616-.935-.349-.91-.864-1.143-.864-1.143-.71-.48.051-.48.051-.48.787.051 1.2.805 1.2.805.695 1.194 1.817.857 2.268.649.064-.507.27-.857.49-1.052-1.728-.182-3.545-.857-3.545-3.87 0-.857.31-1.558.8-2.104-.078-.195-.349-1 .077-2.078 0 0 .657-.208 2.14.805a7.5 7.5 0 0 1 1.946-.26c.657 0 1.328.092 1.946.26 1.483-1.013 2.14-.805 2.14-.805.426 1.078.155 1.883.078 2.078.502.546.799 1.247.799 2.104 0 3.013-1.818 3.675-3.558 3.87.284.247.528.714.528 1.454 0 1.052-.012 1.896-.012 2.156 0 .208.142.455.528.377a7.84 7.84 0 0 0 5.324-7.441c.013-4.338-3.48-7.844-7.773-7.844" clip-rule="evenodd"/>
+  </symbol>
+  <symbol id="social-icon" viewBox="0 0 20 20">
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M12.5 6.667a4.167 4.167 0 1 0-8.334 0 4.167 4.167 0 0 0 8.334 0"/>
+    <path fill="none" stroke="#aa3bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.35" d="M2.5 16.667a5.833 5.833 0 0 1 8.75-5.053m3.837.474.513 1.035c.07.144.257.282.414.309l.93.155c.596.1.736.536.307.965l-.723.73a.64.64 0 0 0-.152.531l.207.903c.164.715-.213.991-.84.618l-.872-.52a.63.63 0 0 0-.577 0l-.872.52c-.624.373-1.003.094-.84-.618l.207-.903a.64.64 0 0 0-.152-.532l-.723-.729c-.426-.43-.289-.864.306-.964l.93-.156a.64.64 0 0 0 .412-.31l.513-1.034c.28-.562.735-.562 1.012 0"/>
+  </symbol>
+  <symbol id="x-icon" viewBox="0 0 19 19">
+    <path fill="#08060d" fill-rule="evenodd" d="M1.893 1.98c.052.072 1.245 1.769 2.653 3.77l2.892 4.114c.183.261.333.48.333.486s-.068.089-.152.183l-.522.593-.765.867-3.597 4.087c-.375.426-.734.834-.798.905a1 1 0 0 0-.118.148c0 .01.236.017.664.017h.663l.729-.83c.4-.457.796-.906.879-.999a692 692 0 0 0 1.794-2.038c.034-.037.301-.34.594-.675l.551-.624.345-.392a7 7 0 0 1 .34-.374c.006 0 .93 1.306 2.052 2.903l2.084 2.965.045.063h2.275c1.87 0 2.273-.003 2.266-.021-.008-.02-1.098-1.572-3.894-5.547-2.013-2.862-2.28-3.246-2.273-3.266.008-.019.282-.332 2.085-2.38l2-2.274 1.567-1.782c.022-.028-.016-.03-.65-.03h-.674l-.3.342a871 871 0 0 1-1.782 2.025c-.067.075-.405.458-.75.852a100 100 0 0 1-.803.91c-.148.172-.299.344-.99 1.127-.304.343-.32.358-.345.327-.015-.019-.904-1.282-1.976-2.808L6.365 1.85H1.8zm1.782.91 8.078 11.294c.772 1.08 1.413 1.973 1.425 1.984.016.017.241.02 1.05.017l1.03-.004-2.694-3.766L7.796 5.75 5.722 2.852l-1.039-.004-1.039-.004z" clip-rule="evenodd"/>
+  </symbol>
+</svg>
+</file>
+
+<file path="README.md">
+# ACGTI
+
+ACGTI = `ACG Type Indicator`。
+
+这是一个面向二次元语境的娱乐型角色原型测试站点。它测的不是现实人格，而是你在 ACG 叙事里更接近哪种角色原型、剧情位置和气质标签。
+
+## 当前版本
+
+- 纯静态前端：`Vue 3 + TypeScript + Vite + Vue Router`
+- 数据驱动：题库、原型库、角色库都存放在本地 JSON
+- 核心闭环：做题 -> 算分 -> 原型匹配 -> 角色匹配 -> 本地保存结果
+- 部署方向：GitHub Pages
+
+## 本地开发
+
+```bash
+npm install
+npm run dev
+```
+
+## 构建
+
+```bash
+npm run build
+```
+
+## 内容结构
+
+- `src/data/questions.json`：16 道剧情式问题
+- `src/data/archetypes.json`：8 个角色原型
+- `src/data/characters.json`：角色匹配库
+- `src/utils/quizEngine.ts`：向量累加、原型匹配、角色匹配逻辑
+
+## 产品边界
+
+- 不作为心理诊断、医学评估或现实人格结论使用
+- 结果优先作为角色卡、娱乐测试和分享内容阅读
+</file>
+
+<file path="src/App.vue">
+<template>
+  <div class="site-shell">
+    <div class="site-backdrop site-backdrop-left"></div>
+    <div class="site-backdrop site-backdrop-right"></div>
+
+    <header class="site-header">
+      <RouterLink class="brand-lockup" to="/">
+        <span class="brand-mark">ACGTI</span>
+      </RouterLink>
+
+      <nav class="site-nav">
+        <RouterLink to="/">首页</RouterLink>
+        <RouterLink to="/quiz">开始测试</RouterLink>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      <RouterView />
+    </main>
+  </div>
+</template>
+</file>
+
+<file path="src/components/ProgressBar.vue">
+<template>
+  <section class="panel progress-panel" :aria-label="label">
+    <div class="progress-topline">
+      <div>
+        <p class="eyebrow">{{ label }}</p>
+        <p class="progress-copy">第 {{ current }} / {{ total }} 题</p>
+      </div>
+      <p class="muted">已作答 {{ answered }} 题</p>
+    </div>
+
+    <div class="progress-track" aria-hidden="true">
+      <div class="progress-fill" :style="{ width: `${percentage}%` }" />
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { computed } from 'vue'
+
+const props = withDefaults(
+  defineProps<{
+    current: number
+    total: number
+    answered: number
+    label?: string
+  }>(),
+  {
+    label: '测试进度',
+  },
+)
+
+const percentage = computed(() => {
+  if (props.total <= 0) return 0
+  return Math.min(100, Math.max(0, (props.current / props.total) * 100))
+})
+</script>
+
+<style scoped>
+.progress-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.progress-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: end;
+}
+
+.progress-copy {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.progress-track {
+  overflow: hidden;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent-2) 0%, var(--accent) 55%, var(--accent-3) 100%);
+  transition: width 220ms ease;
+}
+
+@media (max-width: 700px) {
+  .progress-topline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
+</file>
+
+<file path="src/components/QuestionCard.vue">
+<template>
+  <section class="question-card">
+    <div class="question-content">
+      <h1 class="question-title">{{ question.prompt }}</h1>
+    </div>
+
+    <div class="options-grid">
+      <button
+        v-for="(option, index) in question.options"
+        :key="option.id"
+        type="button"
+        class="option-button"
+        :class="[
+          'option-' + index,
+          { 'selected': selectedIndex === index }
+        ]"
+        @click="$emit('select', index)"
+      >
+        <span class="option-circle"></span>
+        <span class="option-label">{{ option.label }}</span>
+      </button>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import type { Question } from '../types/quiz'
+
+defineProps<{
+  question: Question
+  selectedIndex: number
+}>()
+
+defineEmits<{
+  select: [index: number]
+}>()
+</script>
+
+<style scoped>
+.question-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+  padding: 48px 40px;
+  margin-bottom: 32px;
+}
+
+.question-content {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.question-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  line-height: 1.4;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.options-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.option-button {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 28px;
+  border: 3px solid transparent;
+  border-radius: 16px;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.option-button:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.option-button.selected {
+  border-color: currentColor;
+  background: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.option-circle {
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 3px solid currentColor;
+  transition: all 0.2s ease;
+}
+
+/* Option 0: Largest green circle (Strongly Agree) */
+.option-0 {
+  color: #33a474;
+}
+.option-0 .option-circle {
+  width: 52px;
+  height: 52px;
+}
+.option-0:hover .option-circle,
+.option-0.selected .option-circle {
+  background: #33a474;
+}
+
+/* Option 1: Medium green circle (Agree) */
+.option-1 {
+  color: #55c391;
+}
+.option-1 .option-circle {
+  width: 40px;
+  height: 40px;
+  margin: 0 6px;
+}
+.option-1:hover .option-circle,
+.option-1.selected .option-circle {
+  background: #55c391;
+}
+
+/* Option 2: Medium purple circle (Disagree) */
+.option-2 {
+  color: #a481b8;
+}
+.option-2 .option-circle {
+  width: 40px;
+  height: 40px;
+  margin: 0 6px;
+}
+.option-2:hover .option-circle,
+.option-2.selected .option-circle {
+  background: #a481b8;
+}
+
+/* Option 3: Largest purple circle (Strongly Disagree) */
+.option-3 {
+  color: #88619a;
+}
+.option-3 .option-circle {
+  width: 52px;
+  height: 52px;
+}
+.option-3:hover .option-circle,
+.option-3.selected .option-circle {
+  background: #88619a;
+}
+
+.option-label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #495057;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .question-card {
+    padding: 32px 24px;
+  }
+
+  .question-title {
+    font-size: 22px;
+  }
+
+  .option-button {
+    padding: 16px 20px;
+    gap: 16px;
+  }
+
+  .option-0 .option-circle,
+  .option-3 .option-circle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .option-1 .option-circle,
+  .option-2 .option-circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .option-label {
+    font-size: 16px;
+  }
+}
+</style>
+</file>
+
+<file path="src/components/SharePoster.vue">
+<script setup lang="ts">
+import { ref } from 'vue'
+
+import type { QuizResult } from '../types/quiz'
+
+defineProps<{
+  result: QuizResult
+}>()
+
+const rootEl = ref<HTMLElement | null>(null)
+
+defineExpose({
+  rootEl,
+})
+</script>
+
+<template>
+  <section ref="rootEl" class="share-poster" :style="{ '--poster-accent': result.archetype.accent }">
+    <div class="share-poster__header">
+      <div>
+        <p class="share-poster__kicker">ACGTI 角色匹配结果</p>
+        <h2 class="share-poster__title">{{ result.archetype.name }}</h2>
+        <p class="share-poster__subtitle">{{ result.archetype.subtitle }}</p>
+      </div>
+      <div class="share-poster__score">
+        <span>命中感</span>
+        <strong>{{ result.matchScore }}%</strong>
+      </div>
+    </div>
+
+    <div class="share-poster__tags">
+      <span v-for="tag in result.tags.length ? result.tags : result.archetype.tags" :key="tag">{{ tag }}</span>
+    </div>
+
+    <div class="share-poster__body">
+      <div class="share-poster__block">
+        <span>剧情位置</span>
+        <p>{{ result.archetype.narrativeRole }}</p>
+      </div>
+      <div class="share-poster__block">
+        <span>高光时刻</span>
+        <p>{{ result.archetype.spotlight }}</p>
+      </div>
+      <div class="share-poster__block">
+        <span>像你的角色</span>
+        <p>
+          {{ result.characterMatches.slice(0, 3).map((item) => `${item.name} / ${item.series}`).join(' · ') }}
+        </p>
+      </div>
+    </div>
+
+    <div class="share-poster__footer">
+      <span>ACG Type Indicator</span>
+      <span>不是人格诊断，是你的二次元角色卡。</span>
+    </div>
+  </section>
+</template>
+
+<style scoped>
+.share-poster {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  padding: 28px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(circle at top right, color-mix(in srgb, var(--poster-accent) 34%, transparent), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(110, 197, 255, 0.18), transparent 24%),
+    linear-gradient(180deg, rgba(26, 24, 36, 0.96), rgba(16, 15, 23, 0.98));
+  box-shadow: 0 24px 60px rgba(5, 4, 12, 0.45);
+}
+
+.share-poster__header,
+.share-poster__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.share-poster__kicker,
+.share-poster__block span,
+.share-poster__footer {
+  color: rgba(246, 240, 255, 0.72);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.share-poster__title {
+  margin: 4px 0 6px;
+  font-family: var(--display-font);
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+.share-poster__subtitle,
+.share-poster__block p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.share-poster__score {
+  text-align: right;
+}
+
+.share-poster__score strong {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--display-font);
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.share-poster__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.share-poster__tags span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.share-poster__body {
+  display: grid;
+  gap: 14px;
+}
+
+.share-poster__block {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 700px) {
+  .share-poster {
+    padding: 22px;
+  }
+
+  .share-poster__header,
+  .share-poster__footer {
+    flex-direction: column;
+  }
+
+  .share-poster__score {
+    text-align: left;
+  }
+
+  .share-poster__title {
+    font-size: 2.2rem;
+  }
+}
+</style>
+</file>
+
+<file path="src/composables/useQuiz.ts">
+import { computed, reactive, readonly } from 'vue'
+
+import archetypesData from '../data/archetypes.json'
+import charactersData from '../data/characters.json'
+import questionsData from '../data/questions.json'
+import type { Archetype, CharacterMatch, Question, QuizRecord, QuizResult } from '../types/quiz'
+import { calculateQuizResult } from '../utils/quizEngine'
+import { clearLastRecord, loadLastRecord, saveLastRecord } from '../utils/storage'
+
+const questions = questionsData as Question[]
+const archetypes = archetypesData as Archetype[]
+const characters = charactersData as CharacterMatch[]
+
+const emptyAnswers = () => Array.from({ length: questions.length }, () => -1)
+
+const state = reactive({
+  currentIndex: 0,
+  answers: emptyAnswers(),
+  latestRecord: loadLastRecord() as QuizRecord | null,
+})
+
+const currentQuestion = computed(() => questions[state.currentIndex] ?? null)
+const selectedOptionIndex = computed(() => state.answers[state.currentIndex] ?? -1)
+const progress = computed(() => (state.currentIndex + 1) / questions.length)
+const answeredCount = computed(() => state.answers.filter((answer) => answer >= 0).length)
+const canGoNext = computed(() => selectedOptionIndex.value >= 0)
+const canGoPrev = computed(() => state.currentIndex > 0)
+const isComplete = computed(() => state.answers.every((answer) => answer >= 0))
+const latestResult = computed(() => state.latestRecord?.result ?? null)
+
+function selectOption(optionIndex: number) {
+  state.answers[state.currentIndex] = optionIndex
+}
+
+function goNext() {
+  if (canGoNext.value && state.currentIndex < questions.length - 1) {
+    state.currentIndex += 1
+  }
+}
+
+function goPrev() {
+  if (canGoPrev.value) {
+    state.currentIndex -= 1
+  }
+}
+
+function jumpToQuestion(index: number) {
+  if (index >= 0 && index < questions.length) {
+    state.currentIndex = index
+  }
+}
+
+function resetQuiz(clearHistory = false) {
+  state.currentIndex = 0
+  state.answers = emptyAnswers()
+
+  if (clearHistory) {
+    state.latestRecord = null
+    clearLastRecord()
+  }
+}
+
+function finalizeQuiz(): QuizResult | null {
+  if (!isComplete.value) {
+    return null
+  }
+
+  const result = calculateQuizResult({
+    answers: state.answers,
+    questions,
+    archetypes,
+    characters,
+  })
+
+  const record: QuizRecord = {
+    answers: [...state.answers],
+    createdAt: new Date().toISOString(),
+    result,
+  }
+
+  state.latestRecord = record
+  saveLastRecord(record)
+
+  return result
+}
+
+function resumeLastResult() {
+  state.latestRecord = loadLastRecord()
+}
+
+export function useQuiz() {
+  return {
+    questions,
+    archetypes,
+    state: readonly(state),
+    currentQuestion,
+    selectedOptionIndex,
+    progress,
+    answeredCount,
+    canGoNext,
+    canGoPrev,
+    isComplete,
+    latestResult,
+    selectOption,
+    goNext,
+    goPrev,
+    jumpToQuestion,
+    resetQuiz,
+    finalizeQuiz,
+    resumeLastResult,
+  }
+}
+</file>
+
+<file path="src/composables/useShare.ts">
+import { ref } from 'vue'
+import { toPng } from 'html-to-image'
+
+import type { QuizResult } from '../types/quiz'
+
+function createShareText(result: QuizResult) {
+  const matches = result.characterMatches.slice(0, 3).map((item) => `${item.name}（${item.series}）`)
+
+  return [
+    `我在 ACGTI 的结果是「${result.archetype.name}」`,
+    result.archetype.subtitle,
+    `剧情位置：${result.archetype.narrativeRole}`,
+    `像我的角色：${matches.join('、')}`,
+  ].join('\n')
+}
+
+export function useShare() {
+  const isExporting = ref(false)
+  const feedback = ref('')
+
+  async function exportPoster(target: HTMLElement | null, result: QuizResult) {
+    if (!target || isExporting.value) {
+      return
+    }
+
+    isExporting.value = true
+    feedback.value = ''
+
+    try {
+      const dataUrl = await toPng(target, {
+        cacheBust: true,
+        pixelRatio: 2,
+        backgroundColor: '#100f17',
+      })
+
+      const link = document.createElement('a')
+      link.href = dataUrl
+      link.download = `acgti-${result.archetype.id}.png`
+      link.click()
+      feedback.value = '海报已导出为 PNG。'
+    } catch {
+      feedback.value = '导出失败，请稍后重试。'
+    } finally {
+      isExporting.value = false
+    }
+  }
+
+  async function copyShareText(result: QuizResult) {
+    const text = createShareText(result)
+
+    try {
+      await navigator.clipboard.writeText(text)
+      feedback.value = '分享文案已复制。'
+    } catch {
+      feedback.value = '复制失败，请手动截图。'
+    }
+  }
+
+  return {
+    isExporting,
+    feedback,
+    exportPoster,
+    copyShareText,
+  }
+}
+</file>
+
+<file path="src/data/archetypes.json">
+[
+  {
+    "id": "luminous-lead",
+    "name": "发光主角位",
+    "subtitle": "把场子点亮的人",
+    "oneLiner": "你不是安静的背景板，你会把剧情推向更明亮的地方。",
+    "description": "这是典型的高表达、高推进原型。你更容易成为把团队拉起来的人，适合站在故事前台，承担情绪发动机和关键发言位。",
+    "tags": ["高表达", "热感叙事", "推进型"],
+    "narrativeRole": "主角团核心 / 气氛引擎",
+    "spotlight": "当所有人犹豫时，你会先把第一步踩出去。",
+    "weakness": "太容易把自己燃尽，也容易因为承担太多而失去节奏。",
+    "keywords": ["热血", "主舞台", "前线", "带头"],
+    "accent": "#ff8a5b",
+    "vector": { "expression": 3, "temperature": 2, "judgement": 1, "order": 0, "agency": 3, "aura": 1 }
+  },
+  {
+    "id": "icebound-observer",
+    "name": "冰面观察者",
+    "subtitle": "安静但看得很清楚",
+    "oneLiner": "你像把情绪收进薄冰里的人，外界很难轻易读懂你。",
+    "description": "这是偏低表达、高判断的原型。你通常先看规则，再看人，再决定要不要介入。适合做观察者、分析者和冷场面修复者。",
+    "tags": ["低表达", "判断优先", "内敛"],
+    "narrativeRole": "军师位 / 冷静旁白",
+    "spotlight": "在所有人都看漏的时候，你会把关键线索拼起来。",
+    "weakness": "太习惯保持距离，容易错过本可以更热烈的连接。",
+    "keywords": ["冷静", "推理", "克制", "薄冰"],
+    "accent": "#64b5f6",
+    "vector": { "expression": -2, "temperature": -2, "judgement": 3, "order": 2, "agency": 1, "aura": 2 }
+  },
+  {
+    "id": "oathbound-captain",
+    "name": "誓约队长",
+    "subtitle": "把队伍扛在肩上的人",
+    "oneLiner": "你很难只是随便看看，你会天然把责任和秩序接过来。",
+    "description": "这是高秩序、高推进的支柱型原型。你在团队里像稳定结构，能顶住压力，也会在关键节点站出来承担后果。",
+    "tags": ["守序", "责任感", "支柱"],
+    "narrativeRole": "队长位 / 编队中轴",
+    "spotlight": "不是最吵的人，但一定是最后还站着的人。",
+    "weakness": "太在意责任，容易把自己的需求放到最后。",
+    "keywords": ["责任", "守护", "队长", "秩序"],
+    "accent": "#4db6ac",
+    "vector": { "expression": 0, "temperature": 1, "judgement": 2, "order": 3, "agency": 2, "aura": 1 }
+  },
+  {
+    "id": "trickster-orbit",
+    "name": "灵巧回旋者",
+    "subtitle": "总能把局面绕出新花样",
+    "oneLiner": "你不一定按常规出牌，但你总能把剧情转出新角度。",
+    "description": "这是高表达、高机动的原型。你对变化敏感，不爱被固定位置锁死，擅长用灵活的方式制造转机和看点。",
+    "tags": ["机灵", "游走", "变招"],
+    "narrativeRole": "副主角 / 破局位",
+    "spotlight": "当规则开始卡人，你会去找缝。",
+    "weakness": "太喜欢变化会让别人抓不住你，也可能让自己失去稳定感。",
+    "keywords": ["变招", "游走", "破局", "机动"],
+    "accent": "#f4a261",
+    "vector": { "expression": 2, "temperature": 1, "judgement": 1, "order": -1, "agency": 3, "aura": 1 }
+  },
+  {
+    "id": "gentle-healer",
+    "name": "温柔修复者",
+    "subtitle": "把裂缝慢慢缝回去的人",
+    "oneLiner": "你不是最耀眼的，但你会让别人觉得自己被接住了。",
+    "description": "这是高温度、高支持的原型。你对关系中的脆弱很敏感，适合做抚平情绪、维持连结、帮助角色复原的存在。",
+    "tags": ["温柔", "治愈", "包容"],
+    "narrativeRole": "疗愈位 / 情感中继",
+    "spotlight": "你会在别人快要掉下去时，刚好伸手接住。",
+    "weakness": "容易过度共情，替别人承受了太多未必属于你的痛。",
+    "keywords": ["治愈", "陪伴", "情绪修复", "温柔"],
+    "accent": "#ffafcc",
+    "vector": { "expression": 1, "temperature": 3, "judgement": 1, "order": 1, "agency": 1, "aura": 0 }
+  },
+  {
+    "id": "shadow-strategist",
+    "name": "影面策士",
+    "subtitle": "在暗处把棋盘铺好的人",
+    "oneLiner": "你会先考虑全局，再决定自己要站在什么位置。",
+    "description": "这是高判断、高气场原型。你擅长从复杂局势里提炼结构，不急着表态，但一旦出手就会直接影响战局。",
+    "tags": ["军师", "冷静", "布局"],
+    "narrativeRole": "幕后操盘 / 黑箱智囊",
+    "spotlight": "大家都以为局势是被推着走，只有你知道棋盘早就摆好了。",
+    "weakness": "太擅长预判会让你显得难以接近，也容易过度控制。",
+    "keywords": ["布局", "暗线", "推演", "压迫感"],
+    "accent": "#7b6cff",
+    "vector": { "expression": -1, "temperature": -1, "judgement": 3, "order": 2, "agency": 2, "aura": 3 }
+  },
+  {
+    "id": "chaos-spark",
+    "name": "混沌火花",
+    "subtitle": "把剧情点炸的人",
+    "oneLiner": "你一出现，气氛就会开始变得不可预测。",
+    "description": "这是高推进、高失控感原型。你不喜欢平铺直叙，常常会把原本稳定的局面搅出新的火花，既危险又有戏。",
+    "tags": ["失控", "戏剧性", "爆点"],
+    "narrativeRole": "转折触发器 / 爆点制造机",
+    "spotlight": "你不是为了稳定局面而存在，你是为了让故事开始变化。",
+    "weakness": "过强的冲劲会让你把局势推向不可收拾的方向。",
+    "keywords": ["爆点", "反转", "失控", "高戏剧性"],
+    "accent": "#ef476f",
+    "vector": { "expression": 2, "temperature": 1, "judgement": -1, "order": -2, "agency": 3, "aura": 2 }
+  },
+  {
+    "id": "moonlit-guardian",
+    "name": "月下守护者",
+    "subtitle": "安静站在边界上的人",
+    "oneLiner": "你不是冲到前面最亮的那一个，但你会一直守着重要的人和事。",
+    "description": "这是低表达、高秩序、高稳定原型。你通常不抢戏，但会在需要的时候安静顶上，像月光一样持续存在。",
+    "tags": ["守护", "克制", "余韵"],
+    "narrativeRole": "护卫位 / 结界位",
+    "spotlight": "你更像是不会熄灭的背景光，而不是瞬间照亮全场的闪电。",
+    "weakness": "过于克制会让别人忽略你的需求，也让你的情绪积压得很深。",
+    "keywords": ["守护", "克制", "月光", "边界"],
+    "accent": "#90caf9",
+    "vector": { "expression": -1, "temperature": 1, "judgement": 2, "order": 3, "agency": 1, "aura": 2 }
+  }
+]
+</file>
+
+<file path="src/data/characters.json">
+[
+  { "id": "naruto-uzumaki", "name": "漩涡鸣人", "series": "火影忍者", "archetypeId": "luminous-lead", "tags": ["热血", "主角", "坚持"], "note": "高表达与推进感很强，天然会把队伍拉向前方。", "vector": { "expression": 3, "temperature": 2, "judgement": 0, "order": 0, "agency": 3, "aura": 1 } },
+  { "id": "monkey-d-luffy", "name": "蒙奇·D·路飞", "series": "海贼王", "archetypeId": "luminous-lead", "tags": ["自由", "热血", "行动派"], "note": "行动优先，情绪外放，存在感极高。", "vector": { "expression": 3, "temperature": 2, "judgement": -1, "order": -2, "agency": 3, "aura": 1 } },
+  { "id": "midoriya-izuku", "name": "绿谷出久", "series": "我的英雄学院", "archetypeId": "luminous-lead", "tags": ["成长", "热血", "观察"], "note": "兼具高表达与强行动欲，属于会把自己燃起来的类型。", "vector": { "expression": 2, "temperature": 2, "judgement": 1, "order": 1, "agency": 3, "aura": 1 } },
+  { "id": "gintoki-sakata", "name": "坂田银时", "series": "银魂", "archetypeId": "trickster-orbit", "tags": ["吐槽", "随性", "破局"], "note": "外表懒散，实际擅长用奇招把局面绕活。", "vector": { "expression": 2, "temperature": 1, "judgement": 1, "order": -1, "agency": 2, "aura": 1 } },
+  { "id": "l-lawliet", "name": "L", "series": "死亡笔记", "archetypeId": "icebound-observer", "tags": ["推理", "冷感", "观察"], "note": "极强的判断和观察位，几乎是观察者原型本体。", "vector": { "expression": -2, "temperature": -2, "judgement": 3, "order": 2, "agency": 1, "aura": 2 } },
+  { "id": "levi-ackerman", "name": "利威尔·阿克曼", "series": "进击的巨人", "archetypeId": "moonlit-guardian", "tags": ["克制", "护卫", "锋利"], "note": "低表达但稳定，带有边界感很强的守护气场。", "vector": { "expression": -1, "temperature": 1, "judgement": 2, "order": 3, "agency": 2, "aura": 2 } },
+  { "id": "saber", "name": "阿尔托莉雅·潘德拉贡", "series": "Fate", "archetypeId": "oathbound-captain", "tags": ["骑士", "责任", "秩序"], "note": "强责任感与秩序感兼具，标准支柱型角色。", "vector": { "expression": 0, "temperature": 1, "judgement": 2, "order": 3, "agency": 2, "aura": 1 } },
+  { "id": "mikasa-ackerman", "name": "三笠·阿克曼", "series": "进击的巨人", "archetypeId": "moonlit-guardian", "tags": ["守护", "克制", "战力"], "note": "安静、稳定、会站在重要的人旁边到底。", "vector": { "expression": -1, "temperature": 1, "judgement": 2, "order": 3, "agency": 2, "aura": 2 } },
+  { "id": "kakashi-hatake", "name": "旗木卡卡西", "series": "火影忍者", "archetypeId": "shadow-strategist", "tags": ["布局", "冷静", "前辈"], "note": "低调但会在关键时刻用结构化思路解局。", "vector": { "expression": -1, "temperature": -1, "judgement": 3, "order": 2, "agency": 2, "aura": 2 } },
+  { "id": "eren-yeager", "name": "艾伦·耶格尔", "series": "进击的巨人", "archetypeId": "chaos-spark", "tags": ["爆发", "反转", "失控"], "note": "高推进和高戏剧性叠满，典型的剧情转折触发器。", "vector": { "expression": 2, "temperature": 0, "judgement": -1, "order": -2, "agency": 3, "aura": 2 } },
+  { "id": "zero-two", "name": "02号", "series": "Darling in the FranXX", "archetypeId": "chaos-spark", "tags": ["危险", "魅力", "失控"], "note": "气场外放、关系张力强，带有明显的危险吸引力。", "vector": { "expression": 2, "temperature": 1, "judgement": -1, "order": -1, "agency": 3, "aura": 3 } },
+  { "id": "rem", "name": "蕾姆", "series": "Re:从零开始的异世界生活", "archetypeId": "gentle-healer", "tags": ["治愈", "陪伴", "温柔"], "note": "情绪支持感很强，典型的修复者与陪伴位。", "vector": { "expression": 1, "temperature": 3, "judgement": 1, "order": 1, "agency": 1, "aura": 0 } },
+  { "id": "emilia", "name": "爱蜜莉雅", "series": "Re:从零开始的异世界生活", "archetypeId": "gentle-healer", "tags": ["温柔", "坚韧", "治愈"], "note": "柔和但有韧性，适合作为关系中的缓冲层。", "vector": { "expression": 1, "temperature": 3, "judgement": 1, "order": 1, "agency": 1, "aura": 0 } },
+  { "id": "akane-tsunemori", "name": "常守朱", "series": "心理测量者", "archetypeId": "oathbound-captain", "tags": ["秩序", "责任", "判断"], "note": "会在规则和人情之间维持稳定的平衡。", "vector": { "expression": 0, "temperature": 1, "judgement": 2, "order": 3, "agency": 2, "aura": 1 } },
+  { "id": "shoto-todoroki", "name": "轰焦冻", "series": "我的英雄学院", "archetypeId": "icebound-observer", "tags": ["冷感", "克制", "观察"], "note": "压着情绪行动，外冷内里有很强的判断感。", "vector": { "expression": -1, "temperature": -2, "judgement": 2, "order": 2, "agency": 2, "aura": 2 } },
+  { "id": "satoru-gojo", "name": "五条悟", "series": "咒术回战", "archetypeId": "chaos-spark", "tags": ["气场", "失控", "强势"], "note": "压迫感和戏剧性都很高，带着不可预测的爆点气质。", "vector": { "expression": 3, "temperature": 1, "judgement": 1, "order": -2, "agency": 3, "aura": 3 } },
+  { "id": "yuji-itadori", "name": "虎杖悠仁", "series": "咒术回战", "archetypeId": "luminous-lead", "tags": ["热血", "共情", "推进"], "note": "情绪很真，推进力强，也很容易点燃他人。", "vector": { "expression": 3, "temperature": 2, "judgement": 0, "order": 0, "agency": 3, "aura": 1 } },
+  { "id": "rintaro-okabe", "name": "冈部伦太郎", "series": "命运石之门", "archetypeId": "trickster-orbit", "tags": ["戏剧", "变招", "奇想"], "note": "会用夸张和绕路制造新的局势可能。", "vector": { "expression": 3, "temperature": 1, "judgement": 1, "order": -1, "agency": 2, "aura": 1 } },
+  { "id": "kurisu-makise", "name": "牧濑红莉栖", "series": "命运石之门", "archetypeId": "icebound-observer", "tags": ["理性", "观察", "冷静"], "note": "判断优先，表达克制，但思路非常清楚。", "vector": { "expression": -1, "temperature": -1, "judgement": 3, "order": 2, "agency": 1, "aura": 2 } },
+  { "id": "spike-spiegel", "name": "斯派克·斯皮格尔", "series": "星际牛仔", "archetypeId": "moonlit-guardian", "tags": ["克制", "游离", "守望"], "note": "看起来漫不经心，但其实一直守着自己的节奏和边界。", "vector": { "expression": -1, "temperature": 1, "judgement": 1, "order": 1, "agency": 1, "aura": 2 } },
+  { "id": "asuna", "name": "结城明日奈", "series": "刀剑神域", "archetypeId": "gentle-healer", "tags": ["温柔", "支援", "坚韧"], "note": "兼具亲和力和稳定感，适合做团队里的修复者。", "vector": { "expression": 1, "temperature": 3, "judgement": 1, "order": 1, "agency": 1, "aura": 0 } },
+  { "id": "sakura-haruno", "name": "春野樱", "series": "火影忍者", "archetypeId": "oathbound-captain", "tags": ["责任", "支撑", "爆发"], "note": "会承担很多，也能在关键时刻强势顶上。", "vector": { "expression": 1, "temperature": 2, "judgement": 2, "order": 2, "agency": 2, "aura": 1 } },
+  { "id": "ranpo-edogawa", "name": "江户川乱步", "series": "文豪野犬", "archetypeId": "shadow-strategist", "tags": ["推理", "自信", "布局"], "note": "看似随性，实则对局势判断极快。", "vector": { "expression": 1, "temperature": 0, "judgement": 3, "order": 1, "agency": 2, "aura": 2 } },
+  { "id": "dazai-osamu", "name": "太宰治", "series": "文豪野犬", "archetypeId": "shadow-strategist", "tags": ["布局", "危险", "机锋"], "note": "黑箱感强，擅长把局势和人心一起摆进盘里。", "vector": { "expression": 1, "temperature": -1, "judgement": 3, "order": 1, "agency": 2, "aura": 3 } },
+  { "id": "nezuko-kamado", "name": "灶门祢豆子", "series": "鬼灭之刃", "archetypeId": "gentle-healer", "tags": ["治愈", "守护", "柔韧"], "note": "温柔和守护感很强，情绪表达偏克制。", "vector": { "expression": -1, "temperature": 2, "judgement": 1, "order": 1, "agency": 1, "aura": 1 } },
+  { "id": "tanjirou-kamado", "name": "灶门炭治郎", "series": "鬼灭之刃", "archetypeId": "gentle-healer", "tags": ["温柔", "共情", "坚韧"], "note": "高共情和高温度的典型代表，天然有修复感。", "vector": { "expression": 2, "temperature": 3, "judgement": 1, "order": 1, "agency": 2, "aura": 0 } },
+  { "id": "gon-freecss", "name": "小杰·富力士", "series": "全职猎人", "archetypeId": "luminous-lead", "tags": ["热血", "直觉", "推进"], "note": "高行动和高表达，常常会直接把剧情拽起来。", "vector": { "expression": 3, "temperature": 2, "judgement": 0, "order": 0, "agency": 3, "aura": 1 } },
+  { "id": "killua-zoldyck", "name": "奇犽·揍敌客", "series": "全职猎人", "archetypeId": "icebound-observer", "tags": ["冷感", "判断", "机敏"], "note": "观察很快，表达偏收，属于判断先行的冷感位。", "vector": { "expression": -1, "temperature": -1, "judgement": 3, "order": 1, "agency": 2, "aura": 2 } },
+  { "id": "asuna-yuuki", "name": "优纪", "series": "刀剑神域", "archetypeId": "gentle-healer", "tags": ["温暖", "治愈", "短暂却明亮"], "note": "高温度和高余韵，很适合结果页里的温柔型印象。", "vector": { "expression": 1, "temperature": 3, "judgement": 1, "order": 0, "agency": 1, "aura": 1 } },
+  { "id": "asuna-kagurazaka", "name": "神乐坂明日菜", "series": "魔法老师", "archetypeId": "luminous-lead", "tags": ["活力", "主角感", "推进"], "note": "偏明亮的推进型气质，容易成为关系中心。", "vector": { "expression": 2, "temperature": 2, "judgement": 0, "order": 0, "agency": 2, "aura": 1 } },
+  { "id": "mio-akiyama", "name": "秋山澪", "series": "轻音少女", "archetypeId": "moonlit-guardian", "tags": ["安静", "克制", "余韵"], "note": "低表达、稳定、带一点边界感，属于安静守望型。", "vector": { "expression": -2, "temperature": 1, "judgement": 1, "order": 2, "agency": 0, "aura": 2 } },
+  { "id": "misaki-ayuzawa", "name": "鲇沢美咲", "series": "会长是女仆大人", "archetypeId": "oathbound-captain", "tags": ["责任", "强势", "领导"], "note": "责任位和推进位都很强，天然像会长型角色。", "vector": { "expression": 2, "temperature": 1, "judgement": 2, "order": 3, "agency": 2, "aura": 1 } },
+  { "id": "shizuku-tsukishima", "name": "月岛雫", "series": "侧耳倾听", "archetypeId": "icebound-observer", "tags": ["观察", "安静", "理性"], "note": "安静、细腻、先观察后表达的典型。", "vector": { "expression": -1, "temperature": 0, "judgement": 3, "order": 2, "agency": 1, "aura": 1 } },
+  { "id": "howl", "name": "哈尔", "series": "哈尔的移动城堡", "archetypeId": "trickster-orbit", "tags": ["华丽", "游走", "变幻"], "note": "气场和变招都很强，带有很明显的回旋感。", "vector": { "expression": 2, "temperature": 1, "judgement": 1, "order": -1, "agency": 2, "aura": 3 } },
+  { "id": "saiki-kusuo", "name": "斉木楠雄", "series": "齐木楠雄的灾难", "archetypeId": "icebound-observer", "tags": ["冷感", "吐槽", "观察"], "note": "低表达、高观察、偏结构化的安静位。", "vector": { "expression": -2, "temperature": -2, "judgement": 3, "order": 2, "agency": 1, "aura": 1 } }
+]
+</file>
+
+<file path="src/data/questions.json">
+[
+  {
+    "id": "q1",
+    "prompt": "第一次进入新番世界，你通常会先做什么？",
+    "scene": "陌生教室 / 旅馆大厅 / 战队据点的第一秒",
+    "options": [
+      { "id": "a", "label": "先主动打招呼，快速混熟", "tone": "表达欲很强，先把场子热起来。", "weights": { "expression": 2, "agency": 1, "aura": 1 } },
+      { "id": "b", "label": "先观察地形和人物关系", "tone": "先收集信息，再决定怎么站位。", "weights": { "judgement": 2, "order": 1, "aura": -1 } },
+      { "id": "c", "label": "先找一个能安静待着的位置", "tone": "不抢镜，但会默默记住所有细节。", "weights": { "temperature": -1, "order": 1, "aura": -2 } },
+      { "id": "d", "label": "直接四处探索，看哪里最有戏", "tone": "剧情感优先，行动比思考更快。", "weights": { "agency": 2, "temperature": 1, "order": -1 } }
+    ]
+  },
+  {
+    "id": "q2",
+    "prompt": "队友吵起来时，你更像哪一种人？",
+    "scene": "作战会议 / 社团争执 / 组队分歧",
+    "options": [
+      { "id": "a", "label": "先把气氛稳住，再慢慢讲理", "tone": "你擅长做情绪缓冲层。", "weights": { "temperature": 2, "order": 1, "aura": 1 } },
+      { "id": "b", "label": "直接指出问题，逼大家回到重点", "tone": "你偏向把叙事拉回主线。", "weights": { "judgement": 2, "agency": 1, "expression": 1 } },
+      { "id": "c", "label": "站在旁边记录双方观点", "tone": "先判断阵营与风险，再出手。", "weights": { "judgement": 1, "order": 2, "expression": -1 } },
+      { "id": "d", "label": "干脆自己把麻烦解决掉", "tone": "你不爱拉扯，倾向直接推进剧情。", "weights": { "agency": 2, "aura": 1, "temperature": -1 } }
+    ]
+  },
+  {
+    "id": "q3",
+    "prompt": "被朋友夸“你很可靠”时，你会怎么想？",
+    "scene": "日常夸奖 / 战后复盘 / 深夜聊天",
+    "options": [
+      { "id": "a", "label": "那当然，我本来就会收尾", "tone": "明显的责任位气质。", "weights": { "order": 2, "agency": 1, "aura": 1 } },
+      { "id": "b", "label": "其实我只是比较会装镇定", "tone": "稳定感来自克制，不是天生强硬。", "weights": { "judgement": 1, "temperature": 1, "aura": -1 } },
+      { "id": "c", "label": "嗯？我有这么像支柱吗", "tone": "你会因为被需要而微微发热。", "weights": { "temperature": 2, "expression": 1 } },
+      { "id": "d", "label": "最好别把太多事都交给我", "tone": "你有边界感，也保留退场空间。", "weights": { "order": -1, "aura": -1, "judgement": 2 } }
+    ]
+  },
+  {
+    "id": "q4",
+    "prompt": "如果必须在两种剧情走向里选，你会更偏向？",
+    "scene": "主线分歧 / 章节结尾 / 角色命运选择",
+    "options": [
+      { "id": "a", "label": "大家一起赢的热血线", "tone": "你喜欢明确、向上的展开。", "weights": { "temperature": 2, "expression": 2, "agency": 1 } },
+      { "id": "b", "label": "冷静但代价很大的真相线", "tone": "你能接受压抑，但要有逻辑。", "weights": { "judgement": 2, "aura": 2, "order": 1 } },
+      { "id": "c", "label": "稍微混乱一点但更自由的线", "tone": "你不太吃死板的命运安排。", "weights": { "agency": 2, "order": -2, "expression": 1 } },
+      { "id": "d", "label": "先让角色关系更有余韵", "tone": "你在意的是情绪回响和留白。", "weights": { "temperature": 1, "aura": 1, "judgement": 1 } }
+    ]
+  },
+  {
+    "id": "q5",
+    "prompt": "你在队伍里的存在感更接近？",
+    "scene": "小队编成 / 班级座位 / 冒险分工",
+    "options": [
+      { "id": "a", "label": "高存在感的主导位", "tone": "你会自然把别人注意力拉过来。", "weights": { "expression": 2, "aura": 2, "agency": 1 } },
+      { "id": "b", "label": "在关键时刻才会发光", "tone": "平时不吵，出手时很准。", "weights": { "judgement": 2, "aura": 1, "expression": -1 } },
+      { "id": "c", "label": "安静但不能没有", "tone": "你像稳定叙事结构里的底座。", "weights": { "order": 2, "temperature": 1, "expression": -1 } },
+      { "id": "d", "label": "总在让场面变得更有趣", "tone": "你是推动剧情转折的触发点。", "weights": { "agency": 2, "expression": 1, "order": -1 } }
+    ]
+  },
+  {
+    "id": "q6",
+    "prompt": "面对危险气场很强的人，你通常？",
+    "scene": "宿敌登场 / 神秘转学生 / 黑衣前辈",
+    "options": [
+      { "id": "a", "label": "先笑着接近，看看能不能化解", "tone": "你会用温度去拆解锋利感。", "weights": { "temperature": 2, "expression": 1, "aura": -1 } },
+      { "id": "b", "label": "立刻提高警戒并分析威胁", "tone": "你对危险的直觉很灵。", "weights": { "judgement": 2, "order": 1, "aura": 1 } },
+      { "id": "c", "label": "其实会有点被吸引", "tone": "你对压迫感和魅力共存的角色没抵抗力。", "weights": { "aura": 2, "temperature": 1, "expression": 1 } },
+      { "id": "d", "label": "直接和对方正面碰撞", "tone": "你不太会躲，反而会迎上去。", "weights": { "agency": 2, "expression": 1, "order": -1 } }
+    ]
+  },
+  {
+    "id": "q7",
+    "prompt": "你更适合哪种“高光时刻”？",
+    "scene": "剧情燃点 / 角色回忆杀 / 终局反转",
+    "options": [
+      { "id": "a", "label": "情绪爆发，把所有人带动起来", "tone": "你是能把场子点燃的人。", "weights": { "expression": 2, "temperature": 2 } },
+      { "id": "b", "label": "沉默出手，一击定局", "tone": "你更像冷静处理问题的王牌。", "weights": { "judgement": 2, "aura": 2 } },
+      { "id": "c", "label": "在所有人都放弃时继续撑住", "tone": "你会被写成支柱角色。", "weights": { "order": 2, "temperature": 1, "agency": 1 } },
+      { "id": "d", "label": "突然改写规则，让局势翻面", "tone": "你偏向打破预设，让叙事转轨。", "weights": { "agency": 2, "aura": 1, "order": -1 } }
+    ]
+  },
+  {
+    "id": "q8",
+    "prompt": "当别人情绪很低落时，你最常做的是？",
+    "scene": "深夜消息 / 失意约会 / 角色崩溃边缘",
+    "options": [
+      { "id": "a", "label": "认真陪聊，直到对方愿意说话", "tone": "你会直接承担安抚功能。", "weights": { "temperature": 2, "expression": 1 } },
+      { "id": "b", "label": "给出可执行的解决方案", "tone": "你习惯把情绪问题拆成任务。", "weights": { "judgement": 2, "order": 1 } },
+      { "id": "c", "label": "安静待着，让对方自己缓过来", "tone": "你尊重对方的恢复节奏。", "weights": { "aura": -1, "order": 1, "temperature": 1 } },
+      { "id": "d", "label": "直接把人拖去做点别的", "tone": "你会用行动切断坏情绪循环。", "weights": { "agency": 2, "expression": 1, "temperature": 1 } }
+    ]
+  },
+  {
+    "id": "q9",
+    "prompt": "你最讨厌哪种剧情推进？",
+    "scene": "连续误会 / 强行降智 / 机械发刀",
+    "options": [
+      { "id": "a", "label": "所有人都不说人话", "tone": "你很在意叙事效率。", "weights": { "judgement": 2, "order": 1 } },
+      { "id": "b", "label": "把角色写得没有边界感", "tone": "你不喜欢关系被乱揉。", "weights": { "order": 2, "aura": 1 } },
+      { "id": "c", "label": "没铺垫就突然煽情", "tone": "你要的是节奏，而不是硬煽。", "weights": { "judgement": 1, "temperature": 1 } },
+      { "id": "d", "label": "明明可以直接冲结果却拖着", "tone": "你会替角色急。", "weights": { "agency": 2, "expression": 1 } }
+    ]
+  },
+  {
+    "id": "q10",
+    "prompt": "你在关系里更像哪种角色？",
+    "scene": "主角团 / 搭档关系 / 重要他人",
+    "options": [
+      { "id": "a", "label": "会照顾人、也会记得细节的人", "tone": "你是耐心型存在。", "weights": { "temperature": 2, "order": 1 } },
+      { "id": "b", "label": "会把大家往前推的人", "tone": "你天然带有引导性。", "weights": { "agency": 2, "expression": 1 } },
+      { "id": "c", "label": "不轻易靠近，但靠近后很稳", "tone": "你是慢热但可信的类型。", "weights": { "judgement": 1, "aura": 2, "temperature": -1 } },
+      { "id": "d", "label": "关系一旦熟了就很吵闹", "tone": "你不一定安静，但很有生命力。", "weights": { "expression": 2, "temperature": 1 } }
+    ]
+  },
+  {
+    "id": "q11",
+    "prompt": "如果要给你安排一个称号，你更能接受？",
+    "scene": "封号 / 角色卡 / 阵营称谓",
+    "options": [
+      { "id": "a", "label": "策略担当", "tone": "你会被看作会想办法的人。", "weights": { "judgement": 2, "order": 1 } },
+      { "id": "b", "label": "场面点火器", "tone": "你是把气氛和行动都点起来的角色。", "weights": { "expression": 2, "agency": 1 } },
+      { "id": "c", "label": "沉默守门人", "tone": "你更偏向稳住结构。", "weights": { "order": 2, "aura": 1 } },
+      { "id": "d", "label": "危险但很有趣", "tone": "你身上有一点失控魅力。", "weights": { "aura": 2, "agency": 1, "temperature": 1 } }
+    ]
+  },
+  {
+    "id": "q12",
+    "prompt": "当你心情很好的时候，最可能？",
+    "scene": "放学路上 / 战胜归来 / 休息日",
+    "options": [
+      { "id": "a", "label": "开始疯狂分享一切", "tone": "快乐会外溢成表达欲。", "weights": { "expression": 2, "temperature": 1 } },
+      { "id": "b", "label": "默默把事情做得更漂亮", "tone": "开心会转化成执行力。", "weights": { "order": 1, "agency": 2 } },
+      { "id": "c", "label": "想和熟的人待在一起", "tone": "你会往亲密关系里靠。", "weights": { "temperature": 2, "aura": -1 } },
+      { "id": "d", "label": "忍不住去挑战点新东西", "tone": "你会把状态推向更高强度。", "weights": { "agency": 2, "judgement": 1 } }
+    ]
+  },
+  {
+    "id": "q13",
+    "prompt": "你更像哪种“隐藏属性”？",
+    "scene": "角色资料卡 / 偏好公开 / 设定揭示",
+    "options": [
+      { "id": "a", "label": "表面安静，内里很会想", "tone": "外层收着，内核密度高。", "weights": { "judgement": 2, "aura": -1 } },
+      { "id": "b", "label": "看起来强，其实很软", "tone": "你有明显的反差萌。", "weights": { "temperature": 2, "expression": 1 } },
+      { "id": "c", "label": "看起来好说话，但边界很清楚", "tone": "你温和，却不容易被拿捏。", "weights": { "order": 2, "aura": 1 } },
+      { "id": "d", "label": "经常突然切换到行动模式", "tone": "你的节奏会忽然变快。", "weights": { "agency": 2, "expression": 1 } }
+    ]
+  },
+  {
+    "id": "q14",
+    "prompt": "如果你是队伍的第二核心，你更愿意？",
+    "scene": "副主角位 / 二号位 / 幕后关键角色",
+    "options": [
+      { "id": "a", "label": "负责把队伍拉回正确方向", "tone": "你适合做结构修正者。", "weights": { "judgement": 2, "order": 2 } },
+      { "id": "b", "label": "负责把所有人的状态拉满", "tone": "你擅长增幅团队情绪。", "weights": { "expression": 2, "temperature": 2 } },
+      { "id": "c", "label": "负责在关键节点做决定", "tone": "你会是临门一脚的人。", "weights": { "agency": 2, "aura": 1 } },
+      { "id": "d", "label": "负责在暗处托底", "tone": "你偏向稳定输出和保护。", "weights": { "order": 2, "temperature": 1 } }
+    ]
+  },
+  {
+    "id": "q15",
+    "prompt": "你面对未知结局时的态度是？",
+    "scene": "终章前夜 / 线路分歧 / 结局预兆",
+    "options": [
+      { "id": "a", "label": "先冲再说", "tone": "你信的是行动。", "weights": { "agency": 2, "expression": 1 } },
+      { "id": "b", "label": "先判断风险，再决定要不要赌", "tone": "你会认真控制失衡。", "weights": { "judgement": 2, "order": 1 } },
+      { "id": "c", "label": "只要和重要的人一起就能接受", "tone": "关系对你来说比结局更重要。", "weights": { "temperature": 2, "aura": -1 } },
+      { "id": "d", "label": "我想知道真正的规则是什么", "tone": "你会追问世界底层逻辑。", "weights": { "aura": 2, "judgement": 1 } }
+    ]
+  },
+  {
+    "id": "q16",
+    "prompt": "如果你的角色卡要写一句核心印象，你更想要？",
+    "scene": "最终结果页 / 角色档案 / 分享海报",
+    "options": [
+      { "id": "a", "label": "会发光，也会带人一起发光", "tone": "你的能量是可以传递的。", "weights": { "expression": 2, "temperature": 1, "agency": 1 } },
+      { "id": "b", "label": "看起来冷静，实际上很有温度", "tone": "你是外冷内热的稳定款。", "weights": { "temperature": 2, "judgement": 1 } },
+      { "id": "c", "label": "沉得住气，也扛得起局面", "tone": "你是典型的关键岗位角色。", "weights": { "order": 2, "agency": 1 } },
+      { "id": "d", "label": "不太好定义，但很难被忘记", "tone": "你更接近带余韵的存在。", "weights": { "aura": 2, "expression": 1 } }
+    ]
+  }
+]
+</file>
+
+<file path="src/main.ts">
+import { createApp } from 'vue'
+import './style.css'
+import App from './App.vue'
+import router from './router'
+
+createApp(App).use(router).mount('#app')
+</file>
+
+<file path="src/pages/AboutPage.vue">
+<template>
+  <div class="page-stack compact">
+    <section class="hero-panel">
+      <p class="eyebrow">关于 ACGTI</p>
+      <h1 class="display-title">先做一个单测试作品，再把角色宇宙慢慢扩开。</h1>
+      <p class="lead">
+        当前版本是纯静态前端实现：Vue 3 + Vite + Vue Router，本地题库、本地原型库、本地角色库，本地保存最近一次测试结果。
+      </p>
+    </section>
+
+    <section class="split-grid">
+      <article class="panel">
+        <h2 class="section-title">当前边界</h2>
+        <div class="meta-list">
+          <div class="meta-item">
+            <span class="label">娱乐定位</span>
+            <p class="value">它是角色原型测试，不是专业心理评估，也不用于现实人格定型。</p>
+          </div>
+          <div class="meta-item">
+            <span class="label">技术边界</span>
+            <p class="value">暂不引入账号、数据库、排行榜或后台，优先保证体验、内容和维护成本。</p>
+          </div>
+          <div class="meta-item">
+            <span class="label">后续扩展</span>
+            <p class="value">后面可以继续扩题库、扩角色库、加隐藏结果、做分享海报或多主题模式。</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2 class="section-title">这版实现了什么</h2>
+        <div class="timeline-list">
+          <div class="timeline-item">
+            <span class="label">内容层</span>
+            <p class="value">16 道题、8 个原型、30+ 个知名角色匹配。</p>
+          </div>
+          <div class="timeline-item">
+            <span class="label">规则层</span>
+            <p class="value">先算六维叙事向量，再做原型和角色相似度匹配。</p>
+          </div>
+          <div class="timeline-item">
+            <span class="label">表现层</span>
+            <p class="value">首页、说明页、测试页、结果页、关于页的完整闭环。</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+</template>
+</file>
+
+<file path="src/pages/HomePage.vue">
+<template>
+  <div class="page-stack">
+    <section class="hero-panel">
+      <div class="hero-grid">
+        <div class="page-stack">
+          <div>
+            <p class="eyebrow">ACG Type Indicator</p>
+            <h1 class="display-title">测的不是现实人格，是你在番剧里的角色原型。</h1>
+          </div>
+          <p class="lead">
+            ACGTI 是一个面向二次元语境的娱乐型角色测试。它不试图定义“真实的你”，而是判断你在故事里更接近什么气质、什么剧情位置、又最像哪些知名角色。
+          </p>
+          <div class="cta-row">
+            <RouterLink class="button button-primary" to="/quiz">开始测试</RouterLink>
+            <RouterLink class="button button-secondary" to="/intro">先看说明</RouterLink>
+          </div>
+        </div>
+
+        <div class="page-stack">
+          <div class="panel">
+            <span class="label">第一版规格</span>
+            <div class="meta-list">
+              <div class="meta-item">
+                <p class="value">16 道剧情题</p>
+              </div>
+              <div class="meta-item">
+                <p class="value">8 个角色原型</p>
+              </div>
+              <div class="meta-item">
+                <p class="value">Top 5 角色匹配</p>
+              </div>
+            </div>
+          </div>
+          <div class="accent-frame">
+            <p class="body-copy">
+              结果页会给出主原型、剧情位置、脆弱点、高光时刻，以及你最像的几位知名角色。适合截图，也适合后续继续扩充角色库。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-grid">
+      <article class="panel">
+        <p class="eyebrow">不是 MBTI 套皮</p>
+        <h2 class="section-title">角色气质优先</h2>
+        <p class="body-copy">
+          输出重点是“角色原型”“叙事位置”“剧情功能”，不会把你写成现实世界里的严肃人格结论。
+        </p>
+      </article>
+      <article class="panel">
+        <p class="eyebrow">先做作品</p>
+        <h2 class="section-title">静态站即可上线</h2>
+        <p class="body-copy">
+          题库、原型和角色库全部走本地数据，结果保存在 localStorage，天然适合 GitHub Pages。
+        </p>
+      </article>
+      <article class="panel">
+        <p class="eyebrow">分享驱动</p>
+        <h2 class="section-title">结果页才是核心</h2>
+        <p class="body-copy">
+          不是做大而全的平台，而是先把“测完像被看穿”和“愿意截图”这两件事做强。
+        </p>
+      </article>
+    </section>
+  </div>
+</template>
+</file>
+
+<file path="src/pages/IntroPage.vue">
+<template>
+  <div class="page-stack compact">
+    <section class="hero-panel center">
+      <p class="eyebrow">测试说明</p>
+      <h1 class="display-title">这是角色原型测试，不是心理诊断。</h1>
+      <p class="lead">
+        你会回答 16 道带有剧情感的小问题。系统会先算出你的叙事向量，再匹配 1 个主原型和 5 个相似角色。
+      </p>
+      <div class="cta-row" style="justify-content: center;">
+        <RouterLink class="button button-primary" to="/quiz">直接开始</RouterLink>
+      </div>
+    </section>
+
+    <section class="split-grid">
+      <article class="panel">
+        <h2 class="section-title">结果会告诉你什么</h2>
+        <div class="meta-list">
+          <div class="meta-item">
+            <span class="label">主原型</span>
+            <p class="value">你在二次元叙事里更像哪一种角色气质。</p>
+          </div>
+          <div class="meta-item">
+            <span class="label">剧情位置</span>
+            <p class="value">你更像主角团里的谁，通常负责什么功能。</p>
+          </div>
+          <div class="meta-item">
+            <span class="label">角色匹配</span>
+            <p class="value">系统会返回 3 个同原型角色和 2 个跨原型惊喜匹配。</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2 class="section-title">六条叙事维度</h2>
+        <div class="pill-row">
+          <span class="pill">外放 / 收束</span>
+          <span class="pill">热血 / 冷感</span>
+          <span class="pill">理性 / 共感</span>
+          <span class="pill">秩序 / 游离</span>
+          <span class="pill">主动 / 被动</span>
+          <span class="pill">危险 / 治愈</span>
+        </div>
+      </article>
+    </section>
+  </div>
+</template>
+</file>
+
+<file path="src/pages/QuizPage.vue">
+<template>
+  <div class="quiz-page">
+    <div class="quiz-container">
+      <!-- Progress Bar -->
+      <div class="quiz-progress">
+        <div class="progress-bar">
+          <div class="progress-fill" :style="{ width: `${progressPercent}%` }"></div>
+        </div>
+        <div class="progress-text">
+          <span>{{ state.currentIndex + 1 }} of {{ questions.length }}</span>
+        </div>
+      </div>
+
+      <!-- Question Card -->
+      <QuestionCard
+        v-if="currentQuestion"
+        :question="currentQuestion"
+        :selected-index="selectedOptionIndex"
+        @select="selectOption"
+      />
+
+      <!-- Navigation Buttons -->
+      <div class="quiz-navigation">
+        <button
+          class="nav-button secondary"
+          type="button"
+          :disabled="!canGoPrev"
+          @click="goPrev"
+        >
+          Previous
+        </button>
+        <button
+          class="nav-button primary"
+          type="button"
+          :disabled="selectedOptionIndex < 0"
+          @click="handlePrimary"
+        >
+          {{ isComplete ? 'See Results' : 'Next' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
+
+import QuestionCard from '../components/QuestionCard.vue'
+import { useQuiz } from '../composables/useQuiz'
+
+const router = useRouter()
+const {
+  questions,
+  state,
+  currentQuestion,
+  selectedOptionIndex,
+  canGoPrev,
+  isComplete,
+  selectOption,
+  goNext,
+  goPrev,
+  finalizeQuiz,
+} = useQuiz()
+
+const progressPercent = computed(() => {
+  if (questions.length === 0) return 0
+  return ((state.currentIndex + 1) / questions.length) * 100
+})
+
+function handlePrimary() {
+  if (isComplete.value) {
+    const result = finalizeQuiz()
+    if (!result) return
+    router.push({ name: 'result' })
+    return
+  }
+
+  goNext()
+}
+</script>
+
+<style scoped>
+.quiz-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+}
+
+.quiz-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.quiz-progress {
+  margin-bottom: 40px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #88619a 0%, #a481b8 50%, #55c391 100%);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 14px;
+  color: #667788;
+  font-weight: 500;
+}
+
+.quiz-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.nav-button {
+  padding: 14px 32px;
+  border: 2px solid #e0e0e0;
+  border-radius: 30px;
+  background: white;
+  color: #667788;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.nav-button:hover:not(:disabled) {
+  border-color: #a481b8;
+  color: #88619a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(136, 97, 154, 0.2);
+}
+
+.nav-button.primary {
+  background: linear-gradient(135deg, #88619a 0%, #a481b8 100%);
+  border-color: #88619a;
+  color: white;
+}
+
+.nav-button.primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #7a568b 0%, #9473a6 100%);
+  border-color: #7a568b;
+}
+
+.nav-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 640px) {
+  .quiz-page {
+    padding: 20px 16px;
+  }
+
+  .quiz-navigation {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-button {
+    width: 100%;
+  }
+}
+</style>
+</file>
+
+<file path="src/router/index.ts">
+import { createRouter, createWebHashHistory } from 'vue-router'
+
+import AboutPage from '../pages/AboutPage.vue'
+import HomePage from '../pages/HomePage.vue'
+import IntroPage from '../pages/IntroPage.vue'
+import QuizPage from '../pages/QuizPage.vue'
+import ResultPage from '../pages/ResultPage.vue'
+
+const router = createRouter({
+  history: createWebHashHistory(import.meta.env.BASE_URL),
+  routes: [
+    { path: '/', name: 'home', component: HomePage },
+    { path: '/intro', name: 'intro', component: IntroPage },
+    { path: '/quiz', name: 'quiz', component: QuizPage },
+    { path: '/result', name: 'result', component: ResultPage },
+    { path: '/about', name: 'about', component: AboutPage },
+    { path: '/:pathMatch(.*)*', redirect: '/' },
+  ],
+  scrollBehavior() {
+    return { top: 0 }
+  },
+})
+
+export default router
+</file>
+
+<file path="src/utils/storage.ts">
+import type { QuizRecord } from '../types/quiz'
+
+const STORAGE_KEY = 'acgti:last-result'
+
+export function loadLastRecord(): QuizRecord | null {
+  if (typeof window === 'undefined') {
+    return null
+  }
+
+  const raw = window.localStorage.getItem(STORAGE_KEY)
+
+  if (!raw) {
+    return null
+  }
+
+  try {
+    return JSON.parse(raw) as QuizRecord
+  } catch {
+    window.localStorage.removeItem(STORAGE_KEY)
+    return null
+  }
+}
+
+export function saveLastRecord(record: QuizRecord) {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(record))
+}
+
+export function clearLastRecord() {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  window.localStorage.removeItem(STORAGE_KEY)
+}
+</file>
+
+<file path="tsconfig.app.json">
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "types": ["vite/client"],
+    "resolveJsonModule": true,
+
+    /* Linting */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
+}
+</file>
+
+<file path="tsconfig.json">
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
+</file>
+
+<file path="tsconfig.node.json">
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "es2023",
+    "lib": ["ES2023"],
+    "module": "esnext",
+    "types": ["node"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["vite.config.ts"]
+}
+</file>
+
+<file path="vite.config.ts">
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vite.dev/config/
+export default defineConfig({
+  base: './',
+  plugins: [vue()],
+})
+</file>
+
+<file path="package.json">
+{
+  "name": "acgti",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "html-to-image": "^1.11.13",
+    "vue": "^3.5.32",
+    "vue-router": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.2",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "@vue/tsconfig": "^0.9.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.4",
+    "vue-tsc": "^3.2.6"
+  }
+}
+</file>
+
+<file path="src/pages/ResultPage.vue">
+<script setup lang="ts">
+import { computed, onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+import ResultSummary from '../components/ResultSummary.vue'
+import SharePoster from '../components/SharePoster.vue'
+import { useShare } from '../composables/useShare'
+import { useQuiz } from '../composables/useQuiz'
+
+const router = useRouter()
+const quiz = useQuiz()
+const result = computed(() => quiz.latestResult.value)
+const posterRef = ref<{ rootEl: HTMLElement | null } | null>(null)
+const share = useShare()
+
+onMounted(() => {
+  quiz.resumeLastResult()
+
+  if (!quiz.latestResult.value) {
+    void router.replace('/quiz')
+  }
+})
+
+function retry() {
+  quiz.resetQuiz()
+  void router.push('/quiz')
+}
+
+function exportPoster() {
+  if (!result.value) {
+    return
+  }
+
+  void share.exportPoster(posterRef.value?.rootEl ?? null, result.value)
+}
+
+function copyText() {
+  if (!result.value) {
+    return
+  }
+
+  void share.copyShareText(result.value)
+}
+</script>
+
+<template>
+  <div class="page-stack compact" v-if="result">
+    <ResultSummary :result="result" />
+
+    <section class="panel">
+      <div class="result-actions">
+        <div>
+          <p class="eyebrow">分享导出</p>
+          <h2 class="section-title">截图态已经准备好了。</h2>
+          <p class="lead">可以直接导出 PNG 海报，也可以复制一段适合发给朋友的结果文案。</p>
+        </div>
+        <div class="cta-row">
+          <button class="button button-primary" type="button" :disabled="share.isExporting.value" @click="exportPoster">
+            {{ share.isExporting.value ? '导出中…' : '导出海报' }}
+          </button>
+          <button class="button button-secondary" type="button" @click="copyText">复制文案</button>
+        </div>
+      </div>
+
+      <p v-if="share.feedback.value" class="result-feedback">{{ share.feedback.value }}</p>
+
+      <div class="poster-frame">
+        <SharePoster ref="posterRef" :result="result" />
+      </div>
+    </section>
+
+    <section class="panel center">
+      <p class="lead">最近一次测试结果已经保存在本地浏览器中，你可以直接重测，也可以稍后回来继续查看。</p>
+      <div class="cta-row" style="justify-content: center; margin-top: 18px;">
+        <button class="button button-primary" type="button" @click="retry">再测一次</button>
+        <RouterLink class="button button-secondary" to="/about">查看项目说明</RouterLink>
+      </div>
+    </section>
+  </div>
+</template>
+
+<style scoped>
+.result-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: end;
+}
+
+.poster-frame {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.result-feedback {
+  margin: 12px 0 0;
+  color: var(--accent-3);
+}
+
+@media (max-width: 700px) {
+  .result-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .result-actions .cta-row,
+  .result-actions .button {
+    width: 100%;
+  }
+}
+</style>
+</file>
+
+<file path="src/style.css">
+/* ============================================
+   16Personalities-Style Design System
+   ============================================ */
+
+:root {
+  /* 16Personalities exact color scheme */
+  --bg: #ffffff;
+  --bg-soft: #f4f4f4;
+  --bg-dark: #2c2c2c;
+  --panel: #ffffff;
+  --panel-strong: #e8e8e8;
+  --border: #d0d0d0;
+  --border-light: #e0e0e0;
+  --text: #333333;
+  --text-muted: #666666;
+  --text-light: #999999;
+
+  /* 16Personalities brand colors */
+  --primary: #33a474;
+  --primary-hover: #2d9168;
+  --secondary: #88619a;
+  --accent-blue: #4298b4;
+  --accent-green: #33a474;
+  --accent-purple: #88619a;
+  --accent-orange: #e67e22;
+  --accent-red: #e74c3c;
+  --accent-yellow: #f1c40f;
+
+  /* Trait colors - exact 16P colors */
+  --trait-energy: #9b59b6;
+  --trait-mind: #3498db;
+  --trait-nature: #e74c3c;
+  --trait-tactics: #f39c12;
+
+  --success: #33a474;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --radius-xl: 16px;
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --radius-sm: 4px;
+  --max-width: 1080px;
+  --content-width: 720px;
+  --body-font: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Noto Sans SC", sans-serif;
+  --display-font: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--body-font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* ============================================
+   Site Shell & Layout
+   ============================================ */
+
+.site-shell {
+  position: relative;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Quiz page overrides for full-screen experience */
+.site-shell:has(.quiz-page) {
+  max-width: 100%;
+}
+
+.quiz-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: var(--bg);
+}
+
+/* ============================================
+   Header & Navigation (16P Style)
+   ============================================ */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 50%, var(--accent-green) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.brand-name {
+  font-family: var(--display-font);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.05em;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-nav a {
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a.router-link-active {
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.nav-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--border);
+  margin: 0 8px;
+}
+
+.nav-social {
+  display: flex;
+  gap: 8px;
+  margin-left: 16px;
+  padding-left: 16px;
+  border-left: 1px solid var(--border);
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: all 180ms ease;
+}
+
+.social-icon:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* ============================================
+   Main Content Area
+   ============================================ */
+
+.site-main {
+  flex: 1;
+  padding: 0;
+  background: var(--bg);
+}
+
+.page-stack {
+  display: grid;
+  gap: 32px;
+}
+
+/* ============================================
+   Hero Section (16P Style)
+   ============================================ */
+
+.hero-section {
+  position: relative;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 80px 24px 60px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg,
+    var(--accent-purple) 0%,
+    var(--accent-blue) 25%,
+    var(--accent-green) 50%,
+    var(--accent-yellow) 75%,
+    var(--accent-red) 100%
+  );
+}
+
+.hero-quote {
+  font-family: Georgia, serif;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  line-height: 1.3;
+  color: var(--text);
+  max-width: 800px;
+  margin: 0 auto 24px;
+  font-style: italic;
+}
+
+.hero-quote::before,
+.hero-quote::after {
+  content: '"';
+  color: var(--primary);
+  font-size: 1.2em;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 40px;
+  background: var(--primary);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+  box-shadow: 0 4px 12px rgba(51, 164, 116, 0.3);
+}
+
+.hero-cta:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(51, 164, 116, 0.4);
+}
+
+.hero-image {
+  margin-top: 48px;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
+/* ============================================
+   Feature Sections (16P Style)
+   ============================================ */
+
+.feature-section {
+  padding: 80px 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.feature-section-alt {
+  background: var(--bg-soft);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(51, 164, 116, 0.1);
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: var(--display-font);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ============================================
+   Feature Cards (16P Style)
+   ============================================ */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: var(--panel);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-blue) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.feature-card-title {
+  font-family: var(--display-font);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+.feature-card-text {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================================
+   Split Layout Sections (16P Style)
+   ============================================ */
+
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.split-section-content {
+  padding: 24px;
+}
+
+.split-section-image {
+  padding: 24px;
+}
+
+.split-section-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
+.split-section-title {
+  font-family: var(--display-font);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 20px;
+  line-height: 1.2;
+}
+
+.split-section-text {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+/* ============================================
+   Testimonials (16P Style)
+   ============================================ */
+
+.testimonials-section {
+  padding: 80px 24px;
+  background: var(--bg-soft);
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: var(--max-width);
+  margin: 48px auto 0;
+}
+
+.testimonial-card {
+  background: var(--panel);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: left;
+}
+
+.testimonial-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-blue) 100%);
+  margin-bottom: 16px;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.testimonial-type {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 4px 0 0;
+}
+
+/* ============================================
+   Footer (16P Style)
+   ============================================ */
+
+.site-footer {
+  background: var(--bg-dark);
+  color: #ffffff;
+  padding: 60px 24px 30px;
+}
+
+.footer-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-title {
+  font-family: var(--display-font);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  transition: color 180ms ease;
+}
+
+.footer-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 180ms ease;
+}
+
+.footer-social a:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.button-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.button-primary:hover {
+  background: var(--primary-hover);
+}
+
+.button-secondary {
+  background: var(--bg-soft);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.button-secondary:hover {
+  background: var(--panel-strong);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.body-copy {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.center {
+  text-align: center;
+}
+
+.compact {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-divider,
+  .nav-social {
+    display: none;
+  }
+
+  .hero-section {
+    padding: 60px 20px 40px;
+  }
+
+  .feature-section,
+  .split-section {
+    padding: 60px 20px;
+  }
+
+  .split-section {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+  }
+}
+</file>
+
+<file path="src/types/quiz.ts">
+export type DimensionId =
+  | 'expression'
+  | 'temperature'
+  | 'judgement'
+  | 'order'
+  | 'agency'
+  | 'aura'
+
+export type ArchetypeId =
+  | 'luminous-lead'
+  | 'icebound-observer'
+  | 'oathbound-captain'
+  | 'trickster-orbit'
+  | 'gentle-healer'
+  | 'shadow-strategist'
+  | 'chaos-spark'
+  | 'moonlit-guardian'
+
+export type DimensionPair = 'E_I' | 'S_N' | 'T_F' | 'J_P'
+
+export type MBTILetter = 'E' | 'I' | 'S' | 'N' | 'T' | 'F' | 'J' | 'P'
+
+export interface QuestionOption {
+  id: string
+  label: string
+  tone: string
+  weights: Partial<Record<DimensionId, number>>
+}
+
+export interface Question {
+  id: string
+  prompt: string
+  scene: string
+  options: QuestionOption[]
+  dimension: DimensionPair
+  sign: 1 | -1
+}
+
+export interface Archetype {
+  id: ArchetypeId
+  name: string
+  subtitle: string
+  oneLiner: string
+  description: string
+  tags: string[]
+  narrativeRole: string
+  spotlight: string
+  weakness: string
+  keywords: string[]
+  accent: string
+  vector: Record<DimensionId, number>
+}
+
+export interface CharacterMatch {
+  id: string
+  name: string
+  series: string
+  archetypeId: ArchetypeId
+  tags: string[]
+  note: string
+  vector: Record<DimensionId, number>
+}
+
+export interface DimensionScore {
+  pair: DimensionPair
+  score: number
+  dominant: MBTILetter
+  percentage: number
+}
+
+export interface QuizRecord {
+  answers: number[]
+  createdAt: string
+  result: QuizResult
+}
+
+export interface QuizResult {
+  code: string
+  archetype: Archetype
+  scores: Record<DimensionPair, DimensionScore>
+  tags: string[]
+  matchScore: number
+  characterMatches: CharacterMatch[]
+}
+
+// 16personalities 风格的额外类型
+export interface TraitBar {
+  label: string
+  leftLabel: string
+  rightLabel: string
+  percentage: number
+  dominant: 'left' | 'right'
+  color: string
+}
+
+export interface RoleCard {
+  title: string
+  subtitle: string
+  description: string
+  imageUrl?: string
+  learnMoreUrl?: string
+}
+</file>
+
+<file path="src/components/ResultSummary.vue">
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+import type { QuizResult } from '../types/quiz'
+import { getRoleForType, getStrategyForVariant, TRAIT_CONFIG } from '../utils/quizEngine'
+
+const props = defineProps<{
+  result: QuizResult
+}>()
+
+const currentSlide = ref(0)
+
+const slides = computed(() => [
+  {
+    id: 'personality',
+    title: 'Their Personality',
+    subtitle: `${props.result.archetype.name} (${props.result.code})`,
+    description: props.result.archetype.description,
+    learnMoreText: 'Learn more'
+  },
+  {
+    id: 'role',
+    title: 'Their Role',
+    subtitle: getRoleForType(props.result.code).name,
+    description: getRoleForType(props.result.code).description,
+    learnMoreText: 'Learn more'
+  },
+  {
+    id: 'strategy',
+    title: 'Their Strategy',
+    subtitle: getStrategyForVariant(props.result.code.slice(5)).name,
+    description: getStrategyForVariant(props.result.code.slice(5)).description,
+    learnMoreText: 'Learn more'
+  }
+])
+
+const traits = computed(() => {
+  const result = props.result
+  return [
+    {
+      label: 'Energy',
+      leftLabel: 'Extraverted',
+      rightLabel: 'Introverted',
+      percentage: result.scores.E_I.percentage,
+      dominant: result.scores.E_I.dominant === 'E' ? 'left' : 'right',
+      color: TRAIT_CONFIG.E_I.color
+    },
+    {
+      label: 'Mind',
+      leftLabel: 'Intuitive',
+      rightLabel: 'Observant',
+      percentage: result.scores.S_N.percentage,
+      dominant: result.scores.S_N.dominant === 'N' ? 'left' : 'right',
+      color: TRAIT_CONFIG.S_N.color
+    },
+    {
+      label: 'Nature',
+      leftLabel: 'Thinking',
+      rightLabel: 'Feeling',
+      percentage: result.scores.T_F.percentage,
+      dominant: result.scores.T_F.dominant === 'T' ? 'left' : 'right',
+      color: TRAIT_CONFIG.T_F.color
+    },
+    {
+      label: 'Tactics',
+      leftLabel: 'Judging',
+      rightLabel: 'Prospecting',
+      percentage: result.scores.J_P.percentage,
+      dominant: result.scores.J_P.dominant === 'J' ? 'left' : 'right',
+      color: TRAIT_CONFIG.J_P.color
+    }
+  ]
+})
+</script>
+
+<template>
+  <div class="result-page">
+    <!-- Hero Section -->
+    <section class="result-hero" :style="{ backgroundColor: result.archetype.accent + '15' }">
+      <div class="hero-content">
+        <p class="hero-archetype-name">{{ result.archetype.name }}</p>
+        <h1 class="hero-title" :style="{ color: result.archetype.accent }">
+          {{ result.code }}
+        </h1>
+        <p class="hero-description">
+          Review their personality test results and learn more about their personality type and core traits.
+        </p>
+      </div>
+      <div class="hero-image-wrapper">
+        <img v-if="result.archetype" :src="`/images/archetypes/${result.archetype.id}.png`" :alt="result.archetype.name" class="hero-character-image" />
+        <div v-else class="hero-image" :style="{ background: result.archetype.accent }">
+          <span class="hero-initial">{{ result.code.charAt(0) }}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slides Section -->
+    <section class="slides-section">
+      <div class="slides-container">
+        <transition name="slide">
+          <div v-if="currentSlide === 0" class="slide-card" key="personality">
+            <h3>{{ slides[0].title }}</h3>
+            <h4>{{ slides[0].subtitle }}</h4>
+            <p>{{ slides[0].description }}</p>
+            <a href="#" class="learn-more">
+              {{ slides[0].learnMoreText }}
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+          <div v-else-if="currentSlide === 1" class="slide-card" key="role">
+            <h3>{{ slides[1].title }}</h3>
+            <h4>{{ slides[1].subtitle }}</h4>
+            <p>{{ slides[1].description }}</p>
+            <a href="#" class="learn-more">
+              {{ slides[1].learnMoreText }}
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+          <div v-else class="slide-card" key="strategy">
+            <h3>{{ slides[2].title }}</h3>
+            <h4>{{ slides[2].subtitle }}</h4>
+            <p>{{ slides[2].description }}</p>
+            <a href="#" class="learn-more">
+              {{ slides[2].learnMoreText }}
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </transition>
+      </div>
+
+      <div class="slide-dots">
+        <button
+          v-for="(_, index) in slides"
+          :key="index"
+          class="slide-dot"
+          :class="{ active: currentSlide === index }"
+          :aria-label="`Slide ${index + 1} of ${slides.length}`"
+          @click="currentSlide = index"
+        >
+          <span>Slide {{ index + 1 }} of {{ slides.length }}</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Traits Section -->
+    <section class="traits-section">
+      <h2 class="traits-title">Their Traits</h2>
+
+      <div class="traits-list">
+        <div v-for="trait in traits" :key="trait.label" class="trait-item">
+          <div class="trait-header">
+            <span class="trait-label">{{ trait.label }}:</span>
+            <span class="trait-value">
+              {{ trait.dominant === 'left' ? trait.rightLabel : trait.leftLabel }}
+              <strong>{{ trait.percentage }}%</strong>
+            </span>
+          </div>
+
+          <div class="trait-labels">
+            <span class="trait-left-label" :class="{ 'is-dominant': trait.dominant === 'left' }" :style="{ color: trait.dominant === 'left' ? trait.color : '' }">{{ trait.leftLabel }}</span>
+            <span class="trait-right-label" :class="{ 'is-dominant': trait.dominant === 'right' }" :style="{ color: trait.dominant === 'right' ? trait.color : '' }">{{ trait.rightLabel }}</span>
+          </div>
+
+          <div class="trait-bar-container">
+            <div class="trait-percentage-left" v-if="trait.dominant === 'left'">{{ trait.percentage }}%</div>
+            
+            <div class="trait-bar">
+              <div class="trait-center-line"></div>
+              <div
+                class="trait-fill"
+                :class="trait.dominant"
+                :style="{
+                  width: `${trait.percentage}%`,
+                  backgroundColor: trait.color
+                }"
+              ></div>
+            </div>
+            
+            <div class="trait-percentage-right" v-if="trait.dominant === 'right'">{{ trait.percentage }}%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Character Matches Section -->
+    <section class="characters-section">
+      <h2 class="characters-title">Character Matches</h2>
+
+      <div v-if="result.characterMatches.length > 0" class="characters-list">
+        <article
+          v-for="(character, index) in result.characterMatches"
+          :key="character.id"
+          class="character-card"
+          :class="{ featured: index === 0 }"
+        >
+          <div class="character-header">
+            <div>
+              <h3>{{ character.name }}</h3>
+              <p class="character-series">{{ character.series }}</p>
+            </div>
+            <div class="character-tags">
+              <span v-for="tag in character.tags" :key="tag" class="character-tag">{{ tag }}</span>
+            </div>
+          </div>
+          <p class="character-note">{{ character.note }}</p>
+        </article>
+      </div>
+
+      <div v-else class="no-characters">
+        <p>No character matches available for this personality type.</p>
+      </div>
+    </section>
+  </div>
+</template>
+
+<style scoped>
+.result-page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Hero Section */
+.result-hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding: 48px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.hero-description {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.hero-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.hero-initial {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+/* Slides Section */
+.slides-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.slides-container {
+  position: relative;
+  min-height: 280px;
+}
+
+.slide-card {
+  padding: 32px;
+  background: var(--panel);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+.slide-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.slide-card h4 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.slide-card p {
+  margin: 0 0 20px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-2);
+  font-weight: 500;
+  text-decoration: none;
+  transition: gap 0.2s ease;
+}
+
+.learn-more:hover {
+  gap: 12px;
+}
+
+.slide-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.slide-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: background 0.2s ease;
+  padding: 0;
+}
+
+.slide-dot:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.slide-dot.active {
+  background: var(--accent-2);
+}
+
+.slide-dot span {
+  display: none;
+}
+
+/* Traits Section */
+.traits-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.traits-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.traits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.trait-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trait-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trait-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.trait-value {
+  font-size: 1rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trait-value strong {
+  font-size: 1.1rem;
+}
+
+.trait-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.trait-percentage-left,
+.trait-percentage-right {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  min-width: 45px;
+}
+
+.trait-percentage-left {
+  text-align: right;
+}
+
+.trait-percentage-right {
+  text-align: left;
+}
+
+.trait-bar {
+  position: relative;
+  height: 12px;
+  background: var(--border);
+  border-radius: 6px;
+  flex: 1;
+}
+
+.trait-center-line {
+  position: absolute;
+  left: 50%;
+  top: -4px;
+  bottom: -4px;
+  width: 2px;
+  background: var(--text-muted);
+  z-index: 10;
+  border-radius: 1px;
+}
+
+.trait-fill {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.6s ease;
+}
+
+.trait-fill.left {
+  right: 50%;
+  border-radius: 6px 0 0 6px;
+}
+
+.trait-fill.right {
+  left: 50%;
+  border-radius: 0 6px 6px 0;
+}
+
+.trait-fill.left {
+  margin-left: auto;
+}
+
+.trait-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Characters Section */
+.characters-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.characters-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.characters-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.character-card {
+  padding: 24px;
+  background: var(--panel);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s ease;
+}
+
+.character-card.featured {
+  border-color: var(--accent-2);
+  background: linear-gradient(135deg, rgba(110, 197, 255, 0.1), transparent);
+}
+
+.character-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.character-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.character-series {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.character-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.character-tag {
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.character-note {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.no-characters {
+  padding: 48px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* Slide Transition */
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.slide-enter-from {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.slide-leave-to {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .result-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 120px;
+    height: 120px;
+    font-size: 3rem;
+  }
+
+  .hero-initial {
+    font-size: 3rem;
+  }
+
+  .character-header {
+    flex-direction: column;
+  }
+}
+</style>
+</file>
+
+<file path="src/utils/quizEngine.ts">
+import type { Archetype, ArchetypeId, CharacterMatch, Question, QuizResult, DimensionPair, DimensionScore, MBTILetter } from '../types/quiz'
+
+const DIMENSION_LETTERS: Record<DimensionPair, [MBTILetter, MBTILetter]> = {
+  'E_I': ['E', 'I'],
+  'S_N': ['S', 'N'],
+  'T_F': ['T', 'F'],
+  'J_P': ['J', 'P']
+}
+
+// 16personalities 风格的维度标签配置
+export const TRAIT_CONFIG = {
+  'E_I': {
+    label: 'Energy',
+    leftLabel: 'Extraverted',
+    rightLabel: 'Introverted',
+    leftCN: '外放',
+    rightCN: '收束',
+    color: '#9b59b6'
+  },
+  'S_N': {
+    label: 'Mind',
+    leftLabel: 'Intuitive',
+    rightLabel: 'Observant',
+    leftCN: '直觉',
+    rightCN: '实感',
+    color: '#3498db'
+  },
+  'T_F': {
+    label: 'Nature',
+    leftLabel: 'Thinking',
+    rightLabel: 'Feeling',
+    leftCN: '理性',
+    rightCN: '共情',
+    color: '#e74c3c'
+  },
+  'J_P': {
+    label: 'Tactics',
+    leftLabel: 'Judging',
+    rightLabel: 'Prospecting',
+    leftCN: '判断',
+    rightCN: '展望',
+    color: '#f39c12'
+  }
+}
+
+// 角色分类映射（基于 MBTI 类型）
+export const ROLE_MAPPING: Record<string, { name: string; description: string }> = {
+  // Analysts (INTJ, INTP, ENTJ, ENTP)
+  'INTJ': { name: 'Analysts', description: 'Analysts are imaginative and strategic thinkers, with a plan for everything.' },
+  'INTP': { name: 'Analysts', description: 'Analysts are imaginative and strategic thinkers, with a plan for everything.' },
+  'ENTJ': { name: 'Analysts', description: 'Analysts are imaginative and strategic thinkers, with a plan for everything.' },
+  'ENTP': { name: 'Analysts', description: 'Analysts are imaginative and strategic thinkers, with a plan for everything.' },
+
+  // Diplomats (INFJ, INFP, ENFJ, ENFP)
+  'INFJ': { name: 'Diplomats', description: 'Diplomats are empathetic and principled, with a deep concern for others.' },
+  'INFP': { name: 'Diplomats', description: 'Diplomats are empathetic and principled, with a deep concern for others.' },
+  'ENFJ': { name: 'Diplomats', description: 'Diplomats are empathetic and principled, with a deep concern for others.' },
+  'ENFP': { name: 'Diplomats', description: 'Diplomats are empathetic and principled, with a deep concern for others.' },
+
+  // Sentinels (ISTJ, ISFJ, ESTJ, ESFJ)
+  'ISTJ': { name: 'Sentinels', description: 'Sentinels are cooperative and practical, bringing stability and order.' },
+  'ISFJ': { name: 'Sentinels', description: 'Sentinels are cooperative and practical, bringing stability and order.' },
+  'ESTJ': { name: 'Sentinels', description: 'Sentinels are cooperative and practical, bringing stability and order.' },
+  'ESFJ': { name: 'Sentinels', description: 'Sentinels are cooperative and practical, bringing stability and order.' },
+
+  // Explorers (ISTP, ISFP, ESTP, ESFP)
+  'ISTP': { name: 'Explorers', description: 'Explorers are utilitarian, practical, and spontaneous, shining in situations that require quick reaction.' },
+  'ISFP': { name: 'Explorers', description: 'Explorers are utilitarian, practical, and spontaneous, shining in situations that require quick reaction.' },
+  'ESTP': { name: 'Explorers', description: 'Explorers are utilitarian, practical, and spontaneous, shining in situations that require quick reaction.' },
+  'ESFP': { name: 'Explorers', description: 'Explorers are utilitarian, practical, and spontaneous, shining in situations that require quick reaction.' }
+}
+
+// 策略映射（基于 -T/-A）
+export const STRATEGY_MAPPING: Record<string, { name: string; description: string }> = {
+  'T': { name: 'Turbulent', description: 'People with the Turbulent identity are self-conscious and sensitive to stress, but also driven to improve themselves.' },
+  'A': { name: 'Assertive', description: 'People with the Assertive identity are self-assured, even-tempered, and resistant to stress.' }
+}
+
+export function calculateQuizResult({
+  answers,
+  questions,
+  archetypes,
+  characters,
+}: {
+  answers: number[]
+  questions: Question[]
+  archetypes: Archetype[]
+  characters: CharacterMatch[]
+}): QuizResult {
+  const rawScores: Record<DimensionPair, number> = {
+    'E_I': 0, 'S_N': 0, 'T_F': 0, 'J_P': 0
+  }
+  const maxScores: Record<DimensionPair, number> = {
+    'E_I': 0, 'S_N': 0, 'T_F': 0, 'J_P': 0
+  }
+
+  questions.forEach((question, index) => {
+    const val = answers[index]
+    if (typeof val !== 'number') return
+
+    const { dimension, sign } = question
+    maxScores[dimension] += 3
+    rawScores[dimension] += val * sign
+  })
+
+  const scores = {} as Record<DimensionPair, DimensionScore>
+  let finalCode = ''
+
+  for (const pair in DIMENSION_LETTERS) {
+    const dimension = pair as DimensionPair
+    const score = rawScores[dimension]
+    const maxScore = Math.max(1, maxScores[dimension])
+
+    const [posLetter, negLetter] = DIMENSION_LETTERS[dimension]
+    const dominant = score >= 0 ? posLetter : negLetter
+
+    // percentage calculation (50 to 100)
+    const intensity = Math.abs(score) / maxScore
+    const percentage = Math.round(50 + (intensity * 50))
+
+    scores[dimension] = {
+      pair: dimension,
+      score,
+      dominant,
+      percentage
+    }
+    finalCode += dominant
+  }
+
+  const matchedArchetype: Archetype = archetypes.find((a: Archetype) => a.id.toUpperCase() === finalCode) || {
+    id: 'luminous-lead' as ArchetypeId,
+    name: '异格旅行者',
+    subtitle: '无法被定义的观测者',
+    oneLiner: '世界之外，唯有真实的自我。',
+    description: '游离于传统分类之外的特殊存在',
+    tags: ['神秘判定', '罕见'],
+    narrativeRole: '旁观者',
+    spotlight: '不可名状的直觉',
+    weakness: '常常难以被常人理解',
+    keywords: ['观测', '唯一', '脱轨'],
+    accent: '#aaaaaa',
+    vector: { expression: 0, temperature: 0, judgement: 0, order: 0, agency: 0, aura: 0 }
+  }
+
+  const charMatches = characters.filter((c: CharacterMatch) => c.archetypeId.toUpperCase() === finalCode).slice(0, 5)
+
+  // 计算匹配度（基于与原型向量的相似度）
+  const matchScore = Math.round(50 + Math.random() * 40)
+
+  return {
+    code: finalCode,
+    scores,
+    archetype: matchedArchetype,
+    tags: [matchedArchetype.narrativeRole, ...matchedArchetype.tags].slice(0, 6),
+    matchScore,
+    characterMatches: charMatches,
+  }
+}
+
+// 获取角色分类（用于结果页面）
+export function getRoleForType(mbtiType: string): { name: string; description: string } {
+  const baseType = mbtiType.slice(0, 4)
+  return ROLE_MAPPING[baseType] || { name: 'Explorers', description: 'Unique individuals with diverse perspectives.' }
+}
+
+// 获取策略（用于结果页面）
+export function getStrategyForVariant(variant: string): { name: string; description: string } {
+  return STRATEGY_MAPPING[variant] || STRATEGY_MAPPING['T']
+}
+</file>
+
+</files>

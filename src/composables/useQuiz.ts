@@ -11,7 +11,13 @@ const questions = questionsData as Question[]
 const archetypes = archetypesData as Archetype[]
 const characters = charactersData as CharacterMatch[]
 
-const emptyAnswers = () => Array.from({ length: questions.length }, () => -1)
+const UNANSWERED = -10
+
+function isAnsweredValue(value: number) {
+  return value >= -3 && value <= 3
+}
+
+const emptyAnswers = () => Array.from({ length: questions.length }, () => UNANSWERED)
 
 const state = reactive({
   currentIndex: 0,
@@ -20,16 +26,23 @@ const state = reactive({
 })
 
 const currentQuestion = computed(() => questions[state.currentIndex] ?? null)
-const selectedOptionIndex = computed(() => state.answers[state.currentIndex] ?? -1)
+const selectedOptionIndex = computed(() => state.answers[state.currentIndex] ?? UNANSWERED)
 const progress = computed(() => (state.currentIndex + 1) / questions.length)
-const answeredCount = computed(() => state.answers.filter((answer) => answer >= 0).length)
-const canGoNext = computed(() => selectedOptionIndex.value >= 0)
+const answeredCount = computed(() => state.answers.filter((answer) => isAnsweredValue(answer)).length)
+const canGoNext = computed(() => isAnsweredValue(selectedOptionIndex.value))
 const canGoPrev = computed(() => state.currentIndex > 0)
-const isComplete = computed(() => state.answers.every((answer) => answer >= 0))
+const isComplete = computed(() => state.answers.every((answer) => isAnsweredValue(answer)))
 const latestResult = computed(() => state.latestRecord?.result ?? null)
 
 function selectOption(optionIndex: number) {
+  if (!isAnsweredValue(optionIndex)) return
   state.answers[state.currentIndex] = optionIndex
+}
+
+function selectOptionAt(questionIndex: number, optionValue: number) {
+  if (!isAnsweredValue(optionValue)) return
+  if (questionIndex < 0 || questionIndex >= questions.length) return
+  state.answers[questionIndex] = optionValue
 }
 
 function goNext() {
@@ -102,6 +115,7 @@ export function useQuiz() {
     isComplete,
     latestResult,
     selectOption,
+    selectOptionAt,
     goNext,
     goPrev,
     jumpToQuestion,
