@@ -5,7 +5,6 @@ import { useRoute, useRouter } from 'vue-router'
 import AppIcon from '../components/AppIcon.vue'
 import { useShare } from '../composables/useShare'
 import { useQuiz } from '../composables/useQuiz'
-import { CHARACTER_PROBABILITY_RUNS } from '../utils/characterProbability.ts'
 import { normalizeMbtiCode } from '../utils/quizEngine'
 
 const route = useRoute()
@@ -88,7 +87,6 @@ const primaryCharacterImage = computed(() => {
 const primaryCharacter = computed(() => result.value?.characterMatches?.[0] ?? null)
 const displayCode = computed(() => result.value?.code ?? result.value?.mbtiCode ?? '')
 const resultThemeColor = computed(() => primaryCharacter.value?.accent ?? result.value?.archetype.accent ?? '#e2ad3b')
-const probabilityRunsLabel = computed(() => CHARACTER_PROBABILITY_RUNS.toLocaleString('en-US'))
 const strongestTrait = computed(() => {
   if (!result.value) {
     return null
@@ -168,7 +166,6 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
             </div>
           </div>
           <p class="hero-quote">“{{ result.archetype.oneLiner }}”</p>
-          <p class="hero-probability-note">按每题 7 个选项等概率点击的假设，基于 {{ probabilityRunsLabel }} 份随机答卷模拟，该角色在总体结果中的命中占比约为这个数值。</p>
 
           <div class="hero-actions">
             <button class="action-btn light" @click="copyText">
@@ -437,14 +434,6 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
   margin-top: 4px;
   font-size: 24px;
   line-height: 1;
-}
-
-.hero-probability-note {
-  margin: 14px 0 0;
-  max-width: 620px;
-  font-size: 14px;
-  line-height: 1.6;
-  opacity: 0.88;
 }
 
 .hero-actions {
@@ -965,10 +954,6 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
 
   .hero-metric strong {
     font-size: 21px;
-  }
-
-  .hero-probability-note {
-    font-size: 13px;
   }
 
   .hero-image {
