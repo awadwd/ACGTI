@@ -41,6 +41,10 @@ tmp/
 temp/
 *.tmp
 
+# Local-only agent/tooling files
+AGENTS.md
+.playwright-mcp/
+
 # Python
 __pycache__/
 *.pyc
