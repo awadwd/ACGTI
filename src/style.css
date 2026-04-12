@@ -194,35 +194,15 @@ select {
   gap: 4px;
 }
 
-.language-select {
+.lang-dropdown {
   position: relative;
   display: inline-flex;
   align-items: center;
   margin: 0 4px;
 }
 
-.language-select::after {
-  content: "";
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid #8e9da8;
-  pointer-events: none;
-}
-
-.language-select:hover::after {
-  border-top-color: #3ba17c;
-}
-
-.language-select select {
+.lang-dropdown-trigger {
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   background: #f8f9fa;
   border: 1px solid #e1e6ea;
   border-radius: 20px;
@@ -234,14 +214,88 @@ select {
   cursor: pointer;
   transition: all 0.2s ease;
   outline: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.language-select select:hover,
-.language-select select:focus {
+.lang-dropdown-trigger .arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #8e9da8;
+  pointer-events: none;
+  transition: border-color 0.2s;
+}
+
+.lang-dropdown-trigger:hover,
+.lang-dropdown-trigger:focus,
+.lang-dropdown.is-open .lang-dropdown-trigger {
   background: #fff;
   border-color: #3ba17c;
   color: #3ba17c;
   box-shadow: 0 0 0 3px rgba(59, 161, 124, 0.1);
+}
+
+.lang-dropdown-trigger:hover .arrow,
+.lang-dropdown.is-open .arrow {
+  border-top-color: #3ba17c;
+}
+
+.lang-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #dbe2e7;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  list-style: none;
+  padding: 8px;
+  margin: 0;
+  min-width: 120px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transform-origin: top right;
+}
+
+.dropdown-enter-active,
+.dropdown-leave-active {
+  transition: opacity 0.2s, transform 0.2s;
+}
+.dropdown-enter-from,
+.dropdown-leave-to {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.lang-dropdown-menu li {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+}
+
+.lang-dropdown-menu li:hover {
+  background: #f4f6f8;
+  color: var(--text);
+}
+
+.lang-dropdown-menu li.active {
+  background: #ebf6f1;
+  color: #3ba17c;
 }
 
 .site-nav a {

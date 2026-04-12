@@ -318,6 +318,7 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
             <AppIcon name="copy" />
             分享结果
           </button>
+          <p v-if="share.feedback.value" class="sidebar-feedback">{{ share.feedback.value }}</p>
         </div>
 
         <div class="sidebar-card project-card">
@@ -860,6 +861,14 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
 
 .sidebar-actions button:hover {
   border-color: #c8d0d7;
+}
+
+.sidebar-feedback {
+  margin: 8px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #33a474;
+  text-align: center;
 }
 
 .project-card {
