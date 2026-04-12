@@ -181,7 +181,7 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
               {{ t('result.retry') }}
             </button>
           </div>
-          <p v-if="share.feedback.value" class="hero-feedback">{{ t(share.feedback.value) }}</p>
+          <p v-if="share.feedback.value" class="hero-feedback">{{ share.feedback.value }}</p>
         </div>
 
         <div class="hero-visual poster-box">
@@ -318,7 +318,7 @@ function getDominantTraitLabel(traitId: TraitDimension, leftCode: string, leftLa
             <AppIcon name="copy" />
             分享结果
           </button>
-          <p v-if="share.feedback.value" class="sidebar-feedback">{{ t(share.feedback.value) }}</p>
+          <p v-if="share.feedback.value" class="sidebar-feedback">{{ share.feedback.value }}</p>
         </div>
 
         <div class="sidebar-card project-card">
