@@ -157,7 +157,22 @@ npm run build
 
 ## Star History
 
-[![Star History Chart](./assets/star-history.svg)](https://star-history.com/#tianxingleo/ACGTI&Date)
+<a href="https://www.star-history.com/?repos=tianxingleo%2FACGTI&type=date&legend=top-left">
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://api.star-history.com/chart?repos=tianxingleo/ACGTI&type=date&theme=dark&legend=top-left"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://api.star-history.com/chart?repos=tianxingleo/ACGTI&type=date&legend=top-left"
+    />
+    <img
+      alt="Star History Chart"
+      src="https://api.star-history.com/chart?repos=tianxingleo/ACGTI&type=date&legend=top-left"
+    />
+  </picture>
+</a>
 
 <div align="center">
 
