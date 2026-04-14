@@ -8,9 +8,11 @@ ACG Type Indicator
 
 回答情境式问题 · 获得唯一命中的角色代码 · 解锁你的二次元人格原型
 
-[![Deploy to Cloudflare Pages](https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020?style=flat-square&logo=cloudflare)](https://acgti.tianxingleo.top/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
-[![Hits](https://img.shields.io/badge/Hits-3.5M+-green.svg?style=flat-square)]()
+<p align="center">
+  <a href="https://acgti.tianxingleo.top/"><img src="https://img.shields.io/badge/Deploy-Cloudflare_Pages-F38020?style=flat-square&logo=cloudflare" alt="Deploy to Cloudflare Pages" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License" /></a>
+  <img src="https://img.shields.io/badge/Hits-3.5M+-green.svg?style=flat-square" alt="Hits" />
+</p>
 
 [**✨ 立即体验**](https://acgti.tianxingleo.top/) | [**📖 阅读文档**](#️-架构与原理) | [**🤝 参与贡献**](#-贡献)
 
@@ -23,11 +25,14 @@ ACG Type Indicator
 ## 🎮 界面预览
 
 <div align="center">
-  <img src="https://pub-f8d3afa0c3274f1e943ee2f8c45dff96.r2.dev/26_04_f10e65b456aae5fdb30a2c42e767cf28.webp" alt="首页截图" width="30%" />
+  <img src="https://pub-f8d3afa0c3274f1e943ee2f8c45dff96.r2.dev/26_04_85afc638204090e964a385ef024963af.webp" alt="首页截图" width="45%" />
   &nbsp;
-  <img src="https://pub-f8d3afa0c3274f1e943ee2f8c45dff96.r2.dev/26_04_4c23a24cd1e854f3852e2f2ed46cabd6.webp" alt="答题截图" width="30%" />
+  <img src="https://pub-f8d3afa0c3274f1e943ee2f8c45dff96.r2.dev/26_04_53f6126c96077f9990f8c8f4aef7d20d.webp" alt="答题截图" width="45%" />
+  <br />
+  <br />
+  <img src="https://pub-f8d3afa0c3274f1e943ee2f8c45dff96.r2.dev/26_04_a4b8624d8dfeeeb23ca0b2de7a344e24.webp" alt="结果截图一" width="45%" />
   &nbsp;
-  <img src="https://pub-f8d3afa0c3274f1e943ee2f8c45dff96.r2.dev/26_04_cd45c233a68504cfbfa9319594c223c2.webp" alt="结果截图" width="30%" />
+  <img src="https://pub-f8d3afa0c3274f1e943ee2f8c45dff96.r2.dev/26_04_83aa34b38a795f68b26eadbef4fca2b8.webp" alt="结果截图二" width="45%" />
 </div>
 
 ## ✨ 核心特性
@@ -128,6 +133,14 @@ src/
 
 </details>
 
+## 📰 时间线
+
+- **2026.4.13 21:00:** 网站访问人数达到 100 万，网站访问量超过 350 万，仓库Star 数达到 300
+- **2026.4.12 8:00:** 访问人数达到 50 万
+- **2026.4.11 23:00:** 进入 [**永雏塔菲**](https://www.bilibili.com/video/BV11FDyBZEN1/?spm_id_from=333.337.search-card.all.click) 直播间
+- **2026.4.11 12:00:** 在校内 100 人 BanG Dream 群测试，首次公开
+- **2026.4.10:** 创建仓库
+
 ## 🚀 本地开发
 
 ```bash
@@ -142,14 +155,6 @@ npm run build
 ```
 
 构建产物输出到 `dist/`，配置为相对路径（`base: './'`），可直接部署到 Cloudflare Pages 等静态托管平台。
-
-## 📰 时间线
-
-- **2026.4.13 21:00:** 网站访问人数达到 100 万，网站访问量超过 350 万，仓库Star 数达到 300
-- **2026.4.12 8:00:** 访问人数达到 50 万
-- **2026.4.11 23:00:** 进入 **永雏塔菲** 直播间
-- **2026.4.11 12:00:** 在校内 100 人 BanG Dream 群测试，首次公开
-- **2026.4.10:** 创建仓库
 
 ## 🤝 贡献
 
