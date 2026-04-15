@@ -415,13 +415,13 @@ function viewMatchedCharacter(characterId: string) {
         <section class="public-service-card" v-reveal>
           <div class="public-service-icon-shell">
             <div class="public-service-icon-ring">
-              <img class="public-service-emblem" src="/dlut-emblem.png" alt="大连理工大学校徽" />
+              <img class="public-service-emblem" src="/dlut-emblem.png" :alt="t('result.publicService.alt')" />
             </div>
           </div>
           <div class="public-service-content">
-            <p class="public-service-label">公益广告</p>
-            <p class="public-service-copy">欢迎报考大连理工喵，欢迎报考大连理工谢谢喵</p>
-            <p class="public-service-meta">Dalian University of Technology</p>
+            <p class="public-service-label">{{ t('result.publicService.label') }}</p>
+            <p class="public-service-copy">{{ t('result.publicService.copy') }}</p>
+            <p class="public-service-meta">{{ t('result.publicService.meta') }}</p>
           </div>
         </section>
 
@@ -1280,14 +1280,14 @@ function viewMatchedCharacter(characterId: string) {
 
 .public-service-card {
   margin-bottom: 24px;
-  padding: 22px 24px;
+  padding: 16px 18px;
   border: 1px solid #d9ece4;
-  border-radius: 20px;
+  border-radius: 18px;
   background: linear-gradient(135deg, #f3fbf7 0%, #ffffff 100%);
-  box-shadow: 0 14px 30px rgba(59, 161, 124, 0.08);
+  box-shadow: 0 10px 22px rgba(59, 161, 124, 0.07);
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
 }
 
 .public-service-icon-shell {
@@ -1298,26 +1298,26 @@ function viewMatchedCharacter(characterId: string) {
 .public-service-icon-shell::before {
   content: '';
   position: absolute;
-  inset: -8px;
+  inset: -6px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(66, 152, 180, 0.18) 0%, rgba(66, 152, 180, 0) 72%);
 }
 
 .public-service-icon-ring {
   position: relative;
-  width: 88px;
-  height: 88px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: grid;
   place-items: center;
   background: linear-gradient(180deg, #ffffff 0%, #eef7f9 100%);
   border: 1px solid rgba(66, 152, 180, 0.18);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 10px 24px rgba(66, 152, 180, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 8px 18px rgba(66, 152, 180, 0.12);
 }
 
 .public-service-emblem {
-  width: 66px;
-  height: 66px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
 }
 
@@ -1326,9 +1326,9 @@ function viewMatchedCharacter(characterId: string) {
 }
 
 .public-service-label {
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   color: #33a474;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1337,15 +1337,15 @@ function viewMatchedCharacter(characterId: string) {
 .public-service-copy {
   margin: 0;
   color: #2f3a45;
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.6;
   font-weight: 700;
 }
 
 .public-service-meta {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   color: #6f7a83;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1662,21 +1662,21 @@ function viewMatchedCharacter(characterId: string) {
 
   .public-service-card {
     align-items: flex-start;
-    gap: 14px;
+    gap: 12px;
   }
 
   .public-service-icon-ring {
-    width: 78px;
-    height: 78px;
+    width: 62px;
+    height: 62px;
   }
 
   .public-service-emblem {
-    width: 58px;
-    height: 58px;
+    width: 46px;
+    height: 46px;
   }
 
   .public-service-copy {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .section-title-wrap {
@@ -1776,7 +1776,7 @@ function viewMatchedCharacter(characterId: string) {
   .public-service-card {
     flex-direction: column;
     align-items: stretch;
-    padding: 18px;
+    padding: 14px;
   }
 
   .public-service-icon-shell {
