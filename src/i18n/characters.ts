@@ -400,6 +400,12 @@ const characterNameI18n: Record<string, LocalizedText> = {
     en: 'Vertin',
     ja: 'ヴェルティ',
   },
+  'shirai-kuroko': {
+    'zh-CN': '白井黑子',
+    'zh-TW': '白井黑子',
+    en: 'Kuroko Shirai',
+    ja: '白井黒子',
+  },
 }
 
 const seriesI18n: Record<string, LocalizedText> = {
