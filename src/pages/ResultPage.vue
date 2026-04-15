@@ -412,6 +412,11 @@ function viewMatchedCharacter(characterId: string) {
           </div>
         </section>
 
+        <section class="public-service-card" v-reveal>
+          <p class="public-service-label">公益广告</p>
+          <p class="public-service-copy">欢迎报考大连理工喵，欢迎报考大连理工谢谢喵</p>
+        </section>
+
         <section class="traits-section" id="traits-section" v-reveal>
           <div class="section-title-wrap">
             <div class="section-index">1</div>
@@ -1263,6 +1268,32 @@ function viewMatchedCharacter(characterId: string) {
 
 .result-ad-section {
   margin-top: 24px;
+}
+
+.public-service-card {
+  margin-bottom: 24px;
+  padding: 22px 24px;
+  border: 1px solid #d9ece4;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f3fbf7 0%, #ffffff 100%);
+  box-shadow: 0 14px 30px rgba(59, 161, 124, 0.08);
+}
+
+.public-service-label {
+  margin: 0 0 8px;
+  color: #33a474;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.public-service-copy {
+  margin: 0;
+  color: #2f3a45;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 700;
 }
 
 .result-sidebar {
