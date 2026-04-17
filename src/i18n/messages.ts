@@ -330,6 +330,17 @@ export const messages = {
       lead: '你可以浏览 ACGTI 目前收录的所有二次元角色。他们各自代表了独特的 MBTI 性格模型。',
       stats: '当前已收录 {count} 位角色',
       latest: '最新收录',
+      sortLabel: '排序字段',
+      sortDirectionLabel: '排序方向',
+      sortFields: {
+        rarity: '稀有度',
+        release: '发布时间',
+        series: '作品',
+      },
+      sortDirections: {
+        asc: '升序',
+        desc: '降序',
+      },
     },
     about: {
       eyebrow: '关于 ACGTI',
@@ -670,6 +681,17 @@ export const messages = {
       stats: '當前已收錄 {count} 位角色',
       latest: '🎉 最新更新：',
       lead: '你可以瀏覽 ACGTI 目前收錄的所有二次元角色。他們各自代表了獨特的 MBTI 性格模型。',
+      sortLabel: '排序欄位',
+      sortDirectionLabel: '排序方向',
+      sortFields: {
+        rarity: '稀有度',
+        release: '發佈時間',
+        series: '作品',
+      },
+      sortDirections: {
+        asc: '升序',
+        desc: '降序',
+      },
       'hatsune-miku': {
         title: '世界第一的公主殿下（勞務派遣版）',
         tags: ['電子韭菜收割機', '蔥田永動機', '演唱會空氣吉他冠軍', '二次元公務員'],
@@ -1310,6 +1332,17 @@ export const messages = {
       stats: 'Currently {count} characters included',
       latest: '🎉 Latest updates: ',
       lead: 'Browse every anime-style character currently included in ACGTI. Each one stands for a distinct MBTI-flavored model.',
+      sortLabel: 'Sort by',
+      sortDirectionLabel: 'Direction',
+      sortFields: {
+        rarity: 'Rarity',
+        release: 'Release date',
+        series: 'Series',
+      },
+      sortDirections: {
+        asc: 'Ascending',
+        desc: 'Descending',
+      },
       'hatsune-miku': {
         title: "World's No.1 Princess (Freelance Edition)",
         tags: ['Digital Leek Harvester', 'Leek Field Perpetual Motion Machine', 'Air Guitar World Champion', '2D Civil Servant'],
@@ -1830,6 +1863,17 @@ export const messages = {
       stats: '現在 {count} 人のキャラを収録',
       latest: '🎉 最新の更新：',
       lead: 'ACGTI に収録されているキャラを一覧で見られます。各キャラは MBTI ベースの別々のモデルを表しています。',
+      sortLabel: '並び替え項目',
+      sortDirectionLabel: '並び順',
+      sortFields: {
+        rarity: 'レア度',
+        release: '追加日',
+        series: '作品',
+      },
+      sortDirections: {
+        asc: '昇順',
+        desc: '降順',
+      },
       'hatsune-miku': {
         title: '世界一のプリンセス殿下（業務委託版）',
         tags: ['電子ネギ刈り取り機', 'ネギ畑の永久機関', 'コンサート空中ギター世界王者', '二次元の公務員'],

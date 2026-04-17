@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 
 import { useQuiz } from '../composables/useQuiz'
 import { useI18n } from '../i18n'
@@ -10,9 +10,16 @@ import {
   getLocalizedCharacterSeries,
   isHiddenCharacter,
 } from '../i18n/characters'
+import { getCharacterRarityMeta } from '../utils/characterRarity'
+import type { CharacterMatch } from '../types/quiz'
 
 const { characters, ensureData } = useQuiz()
 const { locale, t } = useI18n()
+type CharacterSortField = 'rarity' | 'release' | 'series'
+type SortDirection = 'asc' | 'desc'
+
+const sortField = ref<CharacterSortField>('rarity')
+const sortDirection = ref<SortDirection>('asc')
 
 // 进入图鉴页时才加载角色数据
 onMounted(() => {
@@ -23,8 +30,10 @@ const visibleCharacters = computed(() => characters.value.filter((character) => 
 const hiddenCharacters = computed(() => characters.value.filter((character) => isHiddenCharacter(character)))
 
 const orderedCharacters = computed(() => {
+  const sortedVisibleCharacters = [...visibleCharacters.value].sort(compareCharacters)
+
   return [
-    ...visibleCharacters.value,
+    ...sortedVisibleCharacters,
     ...[...hiddenCharacters.value].sort((left, right) => getHiddenCharacterOrder(left) - getHiddenCharacterOrder(right)),
   ]
 })
@@ -57,6 +66,77 @@ const latestCharacters = computed(() => {
 const localizedStatsText = computed(() => {
   return t('characters.stats', { count: orderedCharacters.value.length })
 })
+
+const sortOptions = computed(() => ([
+  { value: 'rarity', label: t('characters.sortFields.rarity') },
+  { value: 'release', label: t('characters.sortFields.release') },
+  { value: 'series', label: t('characters.sortFields.series') },
+]) as Array<{ value: CharacterSortField; label: string }>)
+
+const directionOptions = computed(() => ([
+  { value: 'asc', label: t('characters.sortDirections.asc') },
+  { value: 'desc', label: t('characters.sortDirections.desc') },
+]) as Array<{ value: SortDirection; label: string }>)
+
+function compareCharacters(left: CharacterMatch, right: CharacterMatch) {
+  switch (sortField.value) {
+    case 'release':
+      return compareReleaseDate(left, right)
+    case 'series':
+      return compareSeries(left, right)
+    case 'rarity':
+    default:
+      return compareRarity(left, right)
+  }
+}
+
+function compareRarity(left: CharacterMatch, right: CharacterMatch) {
+  const leftMeta = getCharacterRarityMeta(left.id)
+  const rightMeta = getCharacterRarityMeta(right.id)
+  const leftRank = leftMeta?.rank ?? Number.POSITIVE_INFINITY
+  const rightRank = rightMeta?.rank ?? Number.POSITIVE_INFINITY
+
+  if (leftRank !== rightRank) {
+    return sortDirection.value === 'asc' ? leftRank - rightRank : rightRank - leftRank
+  }
+
+  return compareByLocalizedName(left, right)
+}
+
+function compareReleaseDate(left: CharacterMatch, right: CharacterMatch) {
+  const leftTimestamp = Date.parse(left.addedAt ?? '')
+  const rightTimestamp = Date.parse(right.addedAt ?? '')
+  const leftHasDate = Number.isFinite(leftTimestamp)
+  const rightHasDate = Number.isFinite(rightTimestamp)
+
+  if (leftHasDate && rightHasDate && leftTimestamp !== rightTimestamp) {
+    return sortDirection.value === 'asc' ? leftTimestamp - rightTimestamp : rightTimestamp - leftTimestamp
+  }
+
+  if (leftHasDate !== rightHasDate) {
+    return leftHasDate ? -1 : 1
+  }
+
+  return compareByLocalizedName(left, right)
+}
+
+function compareSeries(left: CharacterMatch, right: CharacterMatch) {
+  const leftSeries = getLocalizedCharacterSeries(left, locale.value)
+  const rightSeries = getLocalizedCharacterSeries(right, locale.value)
+  const seriesDelta = leftSeries.localeCompare(rightSeries, locale.value)
+
+  if (seriesDelta !== 0) {
+    return sortDirection.value === 'asc' ? seriesDelta : -seriesDelta
+  }
+
+  return compareByLocalizedName(left, right)
+}
+
+function compareByLocalizedName(left: CharacterMatch, right: CharacterMatch) {
+  const leftName = getLocalizedCharacterName(left, locale.value)
+  const rightName = getLocalizedCharacterName(right, locale.value)
+  return leftName.localeCompare(rightName, locale.value)
+}
 </script>
 
 <template>
@@ -77,6 +157,26 @@ const localizedStatsText = computed(() => {
             >{{ getLocalizedCharacterName(char, locale) }}</RouterLink><span v-if="index < latestCharacters.length - 1">, </span>
           </template>
         </span>
+      </div>
+
+      <div class="sort-panel" v-if="visibleCharacters.length > 0">
+        <label class="sort-field">
+          <span class="sort-label">{{ t('characters.sortLabel') }}</span>
+          <select v-model="sortField" class="sort-select">
+            <option v-for="option in sortOptions" :key="option.value" :value="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+        </label>
+
+        <label class="sort-field">
+          <span class="sort-label">{{ t('characters.sortDirectionLabel') }}</span>
+          <select v-model="sortDirection" class="sort-select">
+            <option v-for="option in directionOptions" :key="option.value" :value="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+        </label>
       </div>
     </section>
 
@@ -138,6 +238,47 @@ const localizedStatsText = computed(() => {
   justify-content: center;
   gap: 0.5rem;
   font-size: 0.95rem;
+}
+
+.sort-panel {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.sort-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #dfe7eb;
+  box-shadow: 0 6px 16px rgba(24, 39, 51, 0.06);
+}
+
+.sort-label {
+  color: #5d6b75;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sort-select {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #23313a;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.sort-select:focus {
+  outline: none;
 }
 
 .stat-count {
@@ -337,6 +478,15 @@ const localizedStatsText = computed(() => {
 }
 
 @media (max-width: 600px) {
+  .sort-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sort-field {
+    justify-content: space-between;
+  }
+
   .characters-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
