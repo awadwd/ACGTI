@@ -408,7 +408,6 @@ function viewMatchedCharacter(characterId: string) {
             <div class="hero-metric">
               <span>{{ t('result.rarity') }}</span>
               <strong class="rarity-pill" :style="rarityTierStyle">{{ rarityTierLabel }}</strong>
-              <small>{{ raritySummaryLabel }}</small>
             </div>
             <div class="hero-metric">
               <span>{{ t('result.match') }}</span>
@@ -1547,6 +1546,7 @@ function viewMatchedCharacter(characterId: string) {
 .rarity-pill--sidebar {
   min-height: 34px;
   font-size: 16px;
+  border-radius: 999px;
 }
 
 .profile-probability {
