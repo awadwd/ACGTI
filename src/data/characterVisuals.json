@@ -488,5 +488,40 @@
     "image": "/images/characters/33.webp",
     "thumb": "/images/characters/thumbs/33.webp",
     "accent": "#7aa7ff"
+  },
+  "alya-kujou": {
+    "image": "/images/characters/艾莉.webp",
+    "thumb": "/images/characters/thumbs/艾莉.webp",
+    "accent": "#C4DAE8"
+  },
+  "kitagawa-marin": {
+    "image": "/images/characters/喜多川海梦.webp",
+    "thumb": "/images/characters/thumbs/喜多川海梦.webp",
+    "accent": "#F4C4D1"
+  },
+  "zero-two": {
+    "image": "/images/characters/02.webp",
+    "thumb": "/images/characters/thumbs/02.webp",
+    "accent": "#F58F98"
+  },
+  "kinomoto-sakura": {
+    "image": "/images/characters/木之本樱.webp",
+    "thumb": "/images/characters/thumbs/木之本樱.webp",
+    "accent": "#FFB7C5"
+  },
+  "tokisaki-kurumi": {
+    "image": "/images/characters/时崎狂三.webp",
+    "thumb": "/images/characters/thumbs/时崎狂三.webp",
+    "accent": "#8A0F1E"
+  },
+  "yuuki-asuna": {
+    "image": "/images/characters/亚丝娜.webp",
+    "thumb": "/images/characters/thumbs/亚丝娜.webp",
+    "accent": "#D46252"
+  },
+  "artoria-pendragon": {
+    "image": "/images/characters/阿尔托莉雅.webp",
+    "thumb": "/images/characters/thumbs/阿尔托莉雅.webp",
+    "accent": "#0F4C81"
   }
 }
