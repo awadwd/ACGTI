@@ -610,6 +610,18 @@ const characterNameI18n: Record<string, LocalizedText> = {
     en: '33 Niang',
     ja: '33娘',
   },
+  'qb': {
+    'zh-CN': '丘比',
+    'zh-TW': '丘比',
+    en: 'Kyubey',
+    ja: 'キュゥべえ',
+  },
+  'kushima-kamome': {
+    'zh-CN': '久岛鸥',
+    'zh-TW': '久島鷗',
+    en: 'Kamome Kushima',
+    ja: '久島鴎',
+  }
 }
 
 const seriesI18n: Record<string, LocalizedText> = {
@@ -960,6 +972,12 @@ const seriesI18n: Record<string, LocalizedText> = {
     'zh-TW': 'bilibili',
     en: 'bilibili',
     ja: 'bilibili',
+  },
+  'Summer Pockets': {
+    'zh-CN': 'Summer Pockets',
+    'zh-TW': 'Summer Pockets',
+    en: 'Summer Pockets',
+    ja: 'サマーポケッツ',
   },
 }
 
