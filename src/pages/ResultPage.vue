@@ -6,6 +6,7 @@ import AdsenseSlot from '../components/AdsenseSlot.vue'
 import AppIcon from '../components/AppIcon.vue'
 import { useShare } from '../composables/useShare'
 import { useQuiz } from '../composables/useQuiz'
+import { socialIcons, type SocialIconBrand } from '../data/socialIcons'
 import { useI18n } from '../i18n'
 import { getHiddenCharacterNote, getHiddenCharacterTags, getHiddenCharacterTitle, getLocalizedCharacterName, getLocalizedCharacterSeries, isHiddenCharacter } from '../i18n/characters'
 import { getCharacterRarityMeta } from '../utils/characterRarity'
@@ -132,68 +133,57 @@ const displayTags = computed(() => {
 const displayCode = computed(() => result.value?.code ?? result.value?.mbtiCode ?? '')
 const displayProbability = computed(() => formatCharacterProbability(result.value?.matchProbability ?? 0))
 const resultThemeColor = computed(() => primaryCharacter.value?.accent ?? result.value?.archetype.accent ?? '#e2ad3b')
-const creatorLinks = computed(() => ([
+type CreatorLink = {
+  id: string
+  brand: SocialIconBrand
+  label: string
+  href: string
+  badgeStyle: Record<string, string>
+}
+
+const creatorLinks = computed<CreatorLink[]>(() => ([
   {
     id: 'xiaohongshu',
+    brand: 'xiaohongshu',
     label: t('result.creatorLinks.items.xiaohongshu'),
     href: 'http://xhslink.com/o/23CXgQXWL85',
-    iconPaths: [
-      'M8 7.5A1.5 1.5 0 0 1 9.5 6H16v12H9.5A1.5 1.5 0 0 0 8 19.5Z',
-      'M8 7.5v12',
-      'M10.5 9.5h3.5',
-      'M10.5 12h3',
-      'M10.5 14.5h3.5',
-    ],
     badgeStyle: {
-      background: '#fff1f3',
-      color: '#cb4d6d',
-      borderColor: '#f3c9d3',
+      '--creator-icon-bg': socialIcons.xiaohongshu.background,
+      '--creator-icon-color': socialIcons.xiaohongshu.accent,
+      '--creator-icon-border': '#f3c9d3',
     },
   },
   {
     id: 'threads',
+    brand: 'threads',
     label: t('result.creatorLinks.items.threads'),
     href: 'https://www.threads.com/@tmxk39/post/DXMWAolETft?xmt=AQF0FQvz-R6ZtizfBRGlitwi5hRbV72jUSAnRctBOuPsF-Fm-nhZfUmRdPB4F-LBtxQb80AY&slof=1',
-    iconPaths: [
-      'M12 6.2c3.1 0 5 1.7 5 4.3 0 2.8-2.1 4.9-5.1 4.9-2.3 0-3.9-1.2-3.9-3 0-1.7 1.4-2.9 3.6-2.9h4.1',
-      'M9.1 8.8c.7-.9 1.7-1.4 3-1.4 1.8 0 3 .9 3 2.5 0 1.8-1.4 2.8-3.1 2.8',
-    ],
     badgeStyle: {
-      background: '#f4f5f6',
-      color: '#49515a',
-      borderColor: '#d7dde2',
+      '--creator-icon-bg': socialIcons.threads.background,
+      '--creator-icon-color': socialIcons.threads.accent,
+      '--creator-icon-border': '#d7dde2',
     },
   },
   {
     id: 'douyin',
+    brand: 'douyin',
     label: t('result.creatorLinks.items.douyin'),
     href: 'https://v.douyin.com/SCrImBFJouI/',
-    iconPaths: [
-      'M13.3 7v6.7a3.3 3.3 0 1 1-3.3-3.3',
-      'M13.3 7c.5 1.4 1.7 2.3 3.4 2.5',
-    ],
     badgeStyle: {
-      background: '#eef8fb',
-      color: '#3c7f92',
-      borderColor: '#c6e4ec',
+      '--creator-icon-bg': socialIcons.douyin.background,
+      '--creator-icon-color': socialIcons.douyin.accent,
+      '--creator-icon-border': '#c6e4ec',
     },
   },
   {
     id: 'bilibili',
+    brand: 'bilibili',
     label: t('result.creatorLinks.items.bilibili'),
     href: 'https://b23.tv/rdaQkwA',
-    iconPaths: [
-      'M9 7.8 7.1 6',
-      'M15 7.8 16.9 6',
-      'M8.2 8.2h7.6A2.2 2.2 0 0 1 18 10.4v4.4A2.2 2.2 0 0 1 15.8 17H8.2A2.2 2.2 0 0 1 6 14.8v-4.4A2.2 2.2 0 0 1 8.2 8.2Z',
-      'M10 12h.01',
-      'M14 12h.01',
-      'M10 14.5c1.1.6 2.9.6 4 0',
-    ],
     badgeStyle: {
-      background: '#f1f3ff',
-      color: '#5a69bf',
-      borderColor: '#d5daf6',
+      '--creator-icon-bg': socialIcons.bilibili.background,
+      '--creator-icon-color': socialIcons.bilibili.accent,
+      '--creator-icon-border': '#d5daf6',
     },
   },
 ]))
@@ -714,8 +704,8 @@ function viewMatchedCharacter(characterId: string) {
             >
               <span class="creator-link-main">
                 <span class="creator-link-icon" :style="item.badgeStyle" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
-                    <path v-for="path in item.iconPaths" :key="path" :d="path" />
+                  <svg :viewBox="socialIcons[item.brand].viewBox" fill="currentColor">
+                    <path v-for="path in socialIcons[item.brand].paths" :key="path" :d="path" />
                   </svg>
                 </span>
                 <span class="creator-link-label">{{ item.label }}</span>
@@ -1695,7 +1685,9 @@ function viewMatchedCharacter(characterId: string) {
   align-items: center;
   justify-content: center;
   border-radius: 11px;
-  border: 1px solid #dce7e0;
+  border: 1px solid var(--creator-icon-border, #dce7e0);
+  background: var(--creator-icon-bg, #f3f8f5);
+  color: var(--creator-icon-color, #3b4b46);
   flex: none;
 }
 
