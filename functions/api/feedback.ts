@@ -6,6 +6,7 @@ import {
   num,
   isValidMbti,
   isValidUuid,
+  validateAnswers,
   verifyTurnstile,
   checkRateLimit,
 } from './_shared'
@@ -45,6 +46,14 @@ export async function onRequestPost(context: any) {
   const confidence = num(raw.confidence, 1, 5)
   const note = typeof raw.note === 'string' ? raw.note.slice(0, 200) : null
   const appVersion = str(raw.appVersion, 16)
+  const validatedAnswers = raw.answers === undefined ? null : validateAnswers(raw.answers)
+  if (raw.answers !== undefined && !validatedAnswers) {
+    return new Response('Invalid answers', { status: 400 })
+  }
+  const answersJson = validatedAnswers && validatedAnswers.length > 0
+    ? JSON.stringify(validatedAnswers)
+    : null
+  const answerCount = validatedAnswers?.length ?? null
 
   // 必填校验
   if (!selfMbti || confidence === null || !appVersion) {
@@ -62,8 +71,8 @@ export async function onRequestPost(context: any) {
 
   try {
     await DB.prepare(
-      `INSERT INTO mbti_feedback (id, submission_id, created_at, app_version, self_mbti, confidence, note)
-       VALUES (?, ?, ?, ?, ?, ?, ?)`
+      `INSERT INTO mbti_feedback (id, submission_id, created_at, app_version, self_mbti, confidence, note, answers_json, answer_count)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
     ).bind(
       feedbackId,
       submissionId || null,
@@ -72,6 +81,8 @@ export async function onRequestPost(context: any) {
       selfMbti.toUpperCase(),
       confidence,
       note,
+      answersJson,
+      answerCount,
     ).run()
 
     return new Response(JSON.stringify({ ok: true }), {

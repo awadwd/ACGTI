@@ -22,21 +22,6 @@ function formatError(err: unknown) {
   return err
 }
 
-async function ensureSubmissionAnswersSchema(DB: any) {
-  await DB.batch([
-    DB.prepare(`
-      CREATE TABLE IF NOT EXISTS submission_answers (
-        submission_id TEXT NOT NULL,
-        question_id TEXT NOT NULL,
-        answer_value INTEGER NOT NULL,
-        PRIMARY KEY (submission_id, question_id)
-      )
-    `),
-    DB.prepare(`CREATE INDEX IF NOT EXISTS idx_submission_answers_submission_id ON submission_answers(submission_id)`),
-    DB.prepare(`CREATE INDEX IF NOT EXISTS idx_submission_answers_question_id ON submission_answers(question_id)`),
-  ])
-}
-
 export async function onRequestPost(context: any) {
   const { DB } = context.env as { DB: any }
 
@@ -61,7 +46,6 @@ export async function onRequestPost(context: any) {
   const archetypeCode = str(raw.archetypeCode, 32)
   const characterCode = str(raw.characterCode, 32)
   const predictedMbti = str(raw.predictedMbti, 4)
-  const questionsVersion = str(raw.questionsVersion, 16)
   const durationMs = num(raw.durationMs, 1000, 3600000) // 1s ~ 1h
 
   // 必填校验
@@ -93,7 +77,6 @@ export async function onRequestPost(context: any) {
     archetypeCode,
     characterCode,
     predictedMbti: predictedMbti || null,
-    questionsVersion: questionsVersion || null,
     durationMs,
   })
 
@@ -113,35 +96,6 @@ export async function onRequestPost(context: any) {
     return new Response('Invalid dimensionScores', { status: 400 })
   }
 
-  // answers 校验：不再要求精确题数，只校验格式合法性
-  let answersJson: string | null = null
-  let answerCount = 0
-  let validatedAnswers: Array<{ questionId: string; answerValue: number }> = []
-  if (raw.answers !== undefined) {
-    if (!Array.isArray(raw.answers)) {
-      return new Response('Invalid answers', { status: 400 })
-    }
-    for (const a of raw.answers) {
-      if (
-        typeof a !== 'object' || a === null ||
-        typeof (a as any).questionId !== 'string' ||
-        typeof (a as any).answerValue !== 'number'
-      ) {
-        return new Response('Invalid answers', { status: 400 })
-      }
-      const qid = str((a as any).questionId, 16)
-      const val = num((a as any).answerValue, -2, 2)
-      if (!qid || val === null) {
-        return new Response('Invalid answers', { status: 400 })
-      }
-      validatedAnswers.push({ questionId: qid, answerValue: val })
-    }
-    if (validatedAnswers.length > 0) {
-      answersJson = JSON.stringify(validatedAnswers)
-      answerCount = validatedAnswers.length
-    }
-  }
-
   const now = new Date().toISOString()
 
   try {
@@ -149,8 +103,8 @@ export async function onRequestPost(context: any) {
       `INSERT OR IGNORE INTO submissions
         (id, created_at, app_version, archetype_code, character_code,
          ei_score, sn_score, tf_score, jp_score, duration_ms,
-         predicted_mbti, answers_json, answer_count, questions_version)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+         predicted_mbti)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
     ).bind(
       submissionId,
       now,
@@ -163,49 +117,11 @@ export async function onRequestPost(context: any) {
       jp,
       durationMs,
       predictedMbti || null,
-      answersJson,
-      answerCount || null,
-      questionsVersion || null,
     ).run()
 
     console.log('✅ submission stored', {
       submissionId,
-      answerCount,
-      hasAnswersJson: !!answersJson,
     })
-
-    // 兼容按题明细查询：逐题写入 submission_answers（用于直接 SQL 查看每道题）
-    if (validatedAnswers.length > 0) {
-      try {
-        await ensureSubmissionAnswersSchema(DB)
-        console.log('🧱 submission_answers schema ensured', {
-          submissionId,
-          answerRows: validatedAnswers.length,
-        })
-
-        await DB.batch(
-          validatedAnswers.map((a) =>
-            DB.prepare(
-              `INSERT OR REPLACE INTO submission_answers
-                (submission_id, question_id, answer_value)
-               VALUES (?, ?, ?)`
-            ).bind(submissionId, a.questionId, a.answerValue)
-          )
-        )
-
-        console.log('✅ submission_answers stored', {
-          submissionId,
-          answerRows: validatedAnswers.length,
-          questionPreview: validatedAnswers.slice(0, 3).map((item) => item.questionId),
-        })
-      } catch (detailErr) {
-        console.error('❌ submission_answers write failed:', {
-          submissionId,
-          answerRows: validatedAnswers.length,
-          error: formatError(detailErr),
-        })
-      }
-    }
 
     return new Response(null, { status: 204 })
   } catch (err) {

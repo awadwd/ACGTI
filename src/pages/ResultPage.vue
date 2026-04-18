@@ -101,7 +101,7 @@ onMounted(async () => {
   applyDebugResultFromRoute()
   await loadRuntimeTurnstileSiteKey()
 
-  if (!hasTurnstile.value) {
+  if (!hasTurnstile.value && import.meta.env.DEV) {
     console.warn('Turnstile site key is missing; feedback verification will be skipped', {
       isDev: import.meta.env.DEV,
       isProd: import.meta.env.PROD,
@@ -497,10 +497,46 @@ function buildSubmitPayload() {
     scoresKeys: Object.keys(scores),
   })
 
-  // 每次构建 payload 时生成全新的 UUID，确保重复提交（即使是返回修改数据后再次提交）也能被记录
-  const submissionId = crypto.randomUUID()
+  const submissionIdValue = ensureSubmissionId()
+  const record = quiz.state.latestRecord
 
-  // 优先 latestRecord.answers；如缺失则回退当前 state.answers
+  let durationMs = 30000 // 默认值 30 秒
+  if (record?.startedAt && record?.createdAt) {
+    const start = new Date(record.startedAt).getTime()
+    const end = new Date(record.createdAt).getTime()
+    const calculated = end - start
+    // 确保在后端接受的范围内：1000-3600000 ms
+    if (calculated >= 1000 && calculated <= 3600000) {
+      durationMs = calculated
+    }
+  }
+
+  const payload = {
+    submissionId: submissionIdValue,
+    archetypeCode: r.archetype?.id || 'unknown-archetype',
+    characterCode: r.code || r.mbtiCode || 'UNKN',
+    predictedMbti: r.mbtiCode && /^[EI][SN][TF][JP]$/i.test(r.mbtiCode) ? r.mbtiCode : undefined,
+    dimensionScores: {
+      ei: typeof scores.E_I?.percentage === 'number' ? Math.max(0, Math.min(100, scores.E_I.percentage)) : 50,
+      sn: typeof scores.S_N?.percentage === 'number' ? Math.max(0, Math.min(100, scores.S_N.percentage)) : 50,
+      tf: typeof scores.T_F?.percentage === 'number' ? Math.max(0, Math.min(100, scores.T_F.percentage)) : 50,
+      jp: typeof scores.J_P?.percentage === 'number' ? Math.max(0, Math.min(100, scores.J_P.percentage)) : 50,
+    },
+    durationMs,
+  }
+
+  console.log('✅ Payload validation:', {
+    submissionIdValid: /^[0-9a-f-]+$/.test(payload.submissionId),
+    archetypeCodeValid: /^[A-Za-z0-9_-]{1,32}$/.test(payload.archetypeCode),
+    characterCodeValid: /^[A-Za-z0-9_-]{1,32}$/.test(payload.characterCode),
+    durationMsValid: payload.durationMs >= 1000 && payload.durationMs <= 3600000,
+    dimensionScoresValid: Object.values(payload.dimensionScores).every(v => typeof v === 'number' && v >= 0 && v <= 100),
+  })
+
+  return payload
+}
+
+function collectAnswerList() {
   const record = quiz.state.latestRecord
   const recordAnswers = Array.isArray(record?.answers) ? record.answers : []
   const stateAnswers = Array.isArray(quiz.state.answers) ? quiz.state.answers : []
@@ -520,7 +556,7 @@ function buildSubmitPayload() {
     .filter((item): item is { questionId: string; answerValue: number } => item !== null)
 
   const questionCount = quiz.questions.value.length
-  console.log('📋 Submit answer source:', {
+  console.log('📋 Feedback answer source:', {
     answerSource,
     questionCount,
     recordAnswersCount: recordAnswers.length,
@@ -528,50 +564,24 @@ function buildSubmitPayload() {
     answerCount: answerList.length,
     answerPreview: answerList.slice(0, 3),
   })
+
   if (answerList.length !== questionCount) {
-    console.warn('⚠️ Submit answers count mismatch:', {
+    console.warn('⚠️ Feedback answers count mismatch:', {
       questionCount,
       answerCount: answerList.length,
       missingCount: Math.max(0, questionCount - answerList.length),
     })
   }
-  
-  let durationMs = 30000 // 默认值 30 秒
-  if (record?.startedAt && record?.createdAt) {
-    const start = new Date(record.startedAt).getTime()
-    const end = new Date(record.createdAt).getTime()
-    const calculated = end - start
-    // 确保在后端接受的范围内：1000-3600000 ms
-    if (calculated >= 1000 && calculated <= 3600000) {
-      durationMs = calculated
-    }
+
+  return answerList
+}
+
+function ensureSubmissionId() {
+  if (!submissionId.value) {
+    submissionId.value = crypto.randomUUID()
   }
 
-  const payload = {
-    submissionId: submissionId,
-    archetypeCode: r.archetype?.id || 'unknown-archetype',
-    characterCode: r.code || r.mbtiCode || 'UNKN',
-    predictedMbti: r.mbtiCode && /^[EI][SN][TF][JP]$/i.test(r.mbtiCode) ? r.mbtiCode : undefined,
-    dimensionScores: {
-      ei: typeof scores.E_I?.percentage === 'number' ? Math.max(0, Math.min(100, scores.E_I.percentage)) : 50,
-      sn: typeof scores.S_N?.percentage === 'number' ? Math.max(0, Math.min(100, scores.S_N.percentage)) : 50,
-      tf: typeof scores.T_F?.percentage === 'number' ? Math.max(0, Math.min(100, scores.T_F.percentage)) : 50,
-      jp: typeof scores.J_P?.percentage === 'number' ? Math.max(0, Math.min(100, scores.J_P.percentage)) : 50,
-    },
-    answers: answerList.length > 0 ? answerList : undefined,
-    durationMs,
-  }
-
-  console.log('✅ Payload validation:', {
-    submissionIdValid: /^[0-9a-f-]+$/.test(payload.submissionId),
-    archetypeCodeValid: /^[A-Za-z0-9_-]{1,32}$/.test(payload.archetypeCode),
-    characterCodeValid: /^[A-Za-z0-9_-]{1,32}$/.test(payload.characterCode),
-    durationMsValid: payload.durationMs >= 1000 && payload.durationMs <= 3600000,
-    dimensionScoresValid: Object.values(payload.dimensionScores).every(v => typeof v === 'number' && v >= 0 && v <= 100),
-    answersCount: payload.answers?.length ?? 0,
-  })
-
-  return payload
+  return submissionId.value
 }
 
 // ── 用户反馈 ──
@@ -589,6 +599,7 @@ const turnstileToken = ref('')
 const turnstileWidgetId = ref<number | null>(null)
 const turnstileStatus = ref<'idle' | 'loading' | 'ready' | 'verified' | 'error'>('idle')
 const turnstileSiteKey = ref(String(import.meta.env.VITE_TURNSTILE_SITE_KEY ?? '').trim())
+const submissionId = ref('')
 
 const hasTurnstile = computed(() => turnstileSiteKey.value.length > 0)
 const feedbackMbtiComplete = computed(() =>
@@ -610,11 +621,13 @@ async function loadRuntimeTurnstileSiteKey() {
     if (runtimeKey) {
       turnstileSiteKey.value = runtimeKey
       console.log('Turnstile site key loaded from runtime config')
-    } else {
+    } else if (import.meta.env.DEV) {
       console.warn('Runtime config returned no Turnstile site key')
     }
   } catch (error) {
-    console.warn('Failed to load runtime Turnstile site key:', error)
+    if (import.meta.env.DEV) {
+      console.warn('Failed to load runtime Turnstile site key:', error)
+    }
   }
 }
 
@@ -708,13 +721,15 @@ async function handleFeedbackSubmit() {
   feedbackError.value = ''
 
   const selfMbti = feedbackEi.value + feedbackSn.value + feedbackTf.value + feedbackJp.value
+  const answers = collectAnswerList()
 
   const ok = await submitFeedback({
-    submissionId: crypto.randomUUID(),
+    submissionId: ensureSubmissionId(),
     selfMbti,
     confidence: feedbackConfidence.value,
     note: feedbackNote.value || undefined,
     turnstileToken: turnstileToken.value || undefined,
+    answers,
   })
 
   feedbackSubmitting.value = false

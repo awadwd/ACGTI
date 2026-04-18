@@ -15,7 +15,6 @@ export interface SubmitPayload {
     tf?: number
     jp?: number
   }
-  answers?: Array<{ questionId: string; answerValue: number }>
   durationMs?: number
 }
 
@@ -26,6 +25,7 @@ export interface FeedbackPayload {
   note?: string
   appVersion: string
   turnstileToken?: string
+  answers?: Array<{ questionId: string; answerValue: number }>
 }
 
 /**
@@ -39,7 +39,6 @@ export function reportResultInBackground(payload: Omit<SubmitPayload, 'appVersio
     submissionId: payload.submissionId,
     archetypeCode: payload.archetypeCode,
     characterCode: payload.characterCode,
-    answersCount: payload.answers?.length ?? 0,
     durationMs: payload.durationMs ?? null,
     appVersion: APP_VERSION,
   })
