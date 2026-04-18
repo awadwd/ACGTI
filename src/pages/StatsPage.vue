@@ -405,15 +405,15 @@ onMounted(async () => {
   align-items: center;
   gap: 1.25rem;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 16px; /* softer border radius */
   padding: 1.25rem 1.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-  border: 1px solid rgba(0,0,0,0.02);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04); /* slightly softer/wider shadow */
+  border: 1px solid #edf1f4; /* clearer border */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .ranking-row:hover {
-  transform: scale(1.01);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px); /* classic SaaS hover */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
 .ranking-index {
@@ -431,12 +431,13 @@ onMounted(async () => {
 .ranking-avatar {
   flex-shrink: 0;
   width: 64px;
-  height: 64px;
-  border-radius: 50%;
+  height: 80px;
+  border-radius: 12px;
   object-fit: cover;
+  object-position: top;
   background: #f0f4f8;
-  border: 2px solid #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #edf1f4;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 .ranking-avatar.placeholder {
   background: linear-gradient(135deg, #e8edf2, #f5f8fb);
@@ -476,14 +477,15 @@ onMounted(async () => {
 }
 .ranking-bar-track {
   width: 100%;
-  height: 10px;
-  background: #e9ecef;
-  border-radius: 5px;
+  height: 12px;
+  background: #f0f4f8; /* softer background */
+  border-radius: 6px;
   overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
 }
 .ranking-bar-fill {
   height: 100%;
-  border-radius: 5px;
+  border-radius: 6px;
   transition: width 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .ranking-count {
@@ -582,8 +584,9 @@ onMounted(async () => {
     gap: 1rem;
   }
   .ranking-avatar {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 64px;
+    border-radius: 8px;
   }
   .overview-value {
     font-size: 2.2rem;
