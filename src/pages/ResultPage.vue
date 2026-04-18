@@ -509,19 +509,19 @@ function buildSubmitPayload() {
 
   const payload = {
     submissionId: submissionId,
-    archetypeCode: r.archetype.id,
-    characterCode: r.code || r.mbtiCode,
-    predictedMbti: r.mbtiCode || undefined,
+    archetypeCode: r.archetype?.id || 'unknown-archetype',
+    characterCode: r.code || r.mbtiCode || 'UNKN',
+    predictedMbti: r.mbtiCode && /^[EISEN][STN][TF][JP]$/i.test(r.mbtiCode) ? r.mbtiCode : undefined,
     dimensionScores: {
-      ei: scores.E_I?.percentage ?? 50,
-      sn: scores.S_N?.percentage ?? 50,
-      tf: scores.T_F?.percentage ?? 50,
-      jp: scores.J_P?.percentage ?? 50,
+      ei: typeof scores.E_I?.percentage === 'number' ? Math.max(0, Math.min(100, scores.E_I.percentage)) : 50,
+      sn: typeof scores.S_N?.percentage === 'number' ? Math.max(0, Math.min(100, scores.S_N.percentage)) : 50,
+      tf: typeof scores.T_F?.percentage === 'number' ? Math.max(0, Math.min(100, scores.T_F.percentage)) : 50,
+      jp: typeof scores.J_P?.percentage === 'number' ? Math.max(0, Math.min(100, scores.J_P.percentage)) : 50,
     },
     answers: rawAnswers.length > 0
       ? rawAnswers.map((val: number, idx: number) => ({
           questionId: `q${idx + 1}`,
-          answerValue: val,
+          answerValue: Math.max(-2, Math.min(2, Math.round(val))),
         }))
       : undefined,
     durationMs,
