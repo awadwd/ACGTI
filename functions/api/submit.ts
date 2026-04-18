@@ -176,13 +176,24 @@ export async function onRequestPost(context: any) {
   const tf = num(ds?.tf, 0, 100)
   const jp = num(ds?.jp, 0, 100)
   if (ei === null || sn === null || tf === null || jp === null) {
-    console.error('❌ Invalid dimensionScores:', { 
+    console.error('❌ Invalid dimensionScores:', {
       ei: [raw.dimensionScores?.ei, 'validated to', ei],
       sn: [raw.dimensionScores?.sn, 'validated to', sn],
       tf: [raw.dimensionScores?.tf, 'validated to', tf],
       jp: [raw.dimensionScores?.jp, 'validated to', jp],
     })
     return new Response('Invalid dimensionScores', { status: 400 })
+  }
+
+  // answers 校验：没有完整答案的提交不写库，静默返回 204
+  const MIN_ANSWERS = 20
+  if (!Array.isArray(raw.answers) || raw.answers.length < MIN_ANSWERS) {
+    console.warn('⏭️ Submit rejected: answers missing or too few', {
+      hasAnswers: Array.isArray(raw.answers),
+      answerCount: Array.isArray(raw.answers) ? raw.answers.length : 0,
+      submissionId,
+    })
+    return new Response(null, { status: 204 })
   }
 
   const now = new Date().toISOString()

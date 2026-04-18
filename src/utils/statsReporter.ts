@@ -16,6 +16,7 @@ export interface SubmitPayload {
     jp?: number
   }
   durationMs?: number
+  answers?: Array<{ questionId: string; answerValue: number }>
 }
 
 export interface FeedbackPayload {
